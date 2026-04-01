@@ -35,7 +35,8 @@ from srunner.scenariomanager.scenarioatomics.atomic_criteria import (CollisionTe
                                                                      RunningRedLightTest,
                                                                      RunningStopTest,
                                                                      ActorBlockedTest,
-                                                                     MinimumSpeedRouteTest)
+                                                                     MinimumSpeedRouteTest,
+                                                                     MinTTCAutoCriterion)
 
 from srunner.scenarios.basic_scenario import BasicScenario
 from srunner.scenarios.background_activity import BackgroundBehavior
@@ -348,7 +349,6 @@ class RouteScenario(BasicScenario):
 
         # Part 2. Add their behavior onto the route's behavior tree
         for scenario in new_scenarios:
-
             # Add behavior
             if scenario.behavior_tree is not None:
                 self.behavior_node.add_child(scenario.behavior_tree)
@@ -401,7 +401,7 @@ class RouteScenario(BasicScenario):
         self.scenario_triggerer = scenario_triggerer
 
         # Add the Background Activity
-        behavior.add_child(BackgroundBehavior(self.ego_vehicles[0], self.route, name="BackgroundActivity"))
+        # behavior.add_child(BackgroundBehavior(self.ego_vehicles[0], self.route, name="BackgroundActivity"))
 
         behavior.add_children(scenario_behaviors)
         return behavior
@@ -477,7 +477,7 @@ class RouteScenario(BasicScenario):
         criteria_tree.add_child(WaitForBlackboardVariable(var_name, True, False, name=check_name))
 
         scenario_criteria = py_trees.composites.Parallel(name=scenario_name,
-                                                policy=py_trees.common.ParallelPolicy.SUCCESS_ON_ONE)
+                                                policy=py_trees.common.ParallelPolicy.SUCCESS_ON_ALL)
         for criterion in criteria:
             scenario_criteria.add_child(criterion)
         scenario_criteria.add_child(WaitForBlackboardVariable(var_name, False, None, name=check_name))
