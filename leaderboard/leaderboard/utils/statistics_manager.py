@@ -22,11 +22,13 @@ from leaderboard.utils.facts_creator import (
     extract_private_facts_reverse_vehicle,
     extract_private_facts_high_speed_accident,
     extract_private_facts_ghost_probe,
+    extract_private_facts_left_turn
 )
 from leaderboard.utils.facts_to_score import (
     score_reverse_vehicle,
     score_high_speed_accident,
-    score_ghost_probe
+    score_ghost_probe,
+    score_left_turn
 )
 
 # 通过 PRIVATE_FACT_EXTRACTORS 和 SCENARIO_SCORERS 动态获取不同场景的 facts extractor 和 scorer
@@ -34,12 +36,14 @@ PRIVATE_FACT_EXTRACTORS = {
     "ReverseVehicle": extract_private_facts_reverse_vehicle,
     "HighSpeedAccident": extract_private_facts_high_speed_accident,
     "GhostProbeScenario": extract_private_facts_ghost_probe,
+    "IntersectionCollisionLeftTurn": extract_private_facts_left_turn,
 }
 
 SCENARIO_SCORERS = {
     "ReverseVehicle": score_reverse_vehicle,
     "HighSpeedAccident": score_high_speed_accident,
     "GhostProbeScenario": score_ghost_probe,
+    "IntersectionCollisionLeftTurn": score_left_turn,
 }
 
 
