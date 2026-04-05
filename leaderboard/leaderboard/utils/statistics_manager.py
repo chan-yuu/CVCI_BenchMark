@@ -22,7 +22,8 @@ from leaderboard.utils.facts_creator import (
     extract_private_facts_reverse_vehicle,
     extract_private_facts_high_speed_accident,
     extract_private_facts_ghost_probe,
-    extract_private_facts_left_turn,
+    extract_private_facts_broken_down_vehicle,
+    extract_private_facts_left_turn
     extract_private_facts_static_barrier,
     extract_private_facts_frontcar_disappearance
 )
@@ -30,7 +31,8 @@ from leaderboard.utils.facts_to_score import (
     score_reverse_vehicle,
     score_high_speed_accident,
     score_ghost_probe,
-    score_left_turn,
+    score_broken_down_vehicle,
+    score_left_turn
     score_static_barrier,
     score_frontcar_disappear_accident
 )
@@ -40,6 +42,7 @@ PRIVATE_FACT_EXTRACTORS = {
     "ReverseVehicle": extract_private_facts_reverse_vehicle,
     "HighSpeedAccident": extract_private_facts_high_speed_accident,
     "GhostProbeScenario": extract_private_facts_ghost_probe,
+    "BrokenDownVehicle": extract_private_facts_broken_down_vehicle,
     "IntersectionCollisionLeftTurn": extract_private_facts_left_turn,
     "StaticBarrier": extract_private_facts_static_barrier,
     "CarDisappearDiagonalAccident": extract_private_facts_frontcar_disappearance,
@@ -49,6 +52,7 @@ SCENARIO_SCORERS = {
     "ReverseVehicle": score_reverse_vehicle,
     "HighSpeedAccident": score_high_speed_accident,
     "GhostProbeScenario": score_ghost_probe,
+    "BrokenDownVehicle": score_broken_down_vehicle,
     "IntersectionCollisionLeftTurn": score_left_turn,
     "StaticBarrier": score_static_barrier,
     "CarDisappearDiagonalAccident": score_frontcar_disappear_accident,

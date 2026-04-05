@@ -121,7 +121,26 @@ def extract_private_facts_ghost_probe(criteria_root):
                 facts["pedestrian_resume"] = (criterion.test_status == "SUCCESS")
 
     return facts
+
 # avoid a disabled vehicle_private_facats extracts
+def extract_private_facts_broken_down_vehicle(criteria_list):
+    facts = {
+        "brake_response": False,
+        "safe_bypass": False,
+        "resume_route": False,
+    }
+
+    for criterion in criteria_list:
+        if criterion.name == "BrakeCriterion":
+            facts["brake_response"] = (criterion.test_status == "SUCCESS")
+
+        elif criterion.name == "BypassCriterion":
+            facts["safe_bypass"] = (criterion.test_status == "SUCCESS")
+
+        elif criterion.name == "ResumeCriterion":
+            facts["resume_route"] = (criterion.test_status == "SUCCESS")
+
+    return facts
 
 # Slanted motor and children_private_facats extracts
 

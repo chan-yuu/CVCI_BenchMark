@@ -3431,7 +3431,138 @@ class PedestrianResumeCriterion(Criterion):
 
 
 # avoid a disabled vehicle criterion
+class BrokenDownVehicleBrakeCriterion(Criterion):
 
+    def __init__(self, actor, hazard_actor, name="BrakeCriterion", 
+                 trigger_y=85.0, brake_threshold=0.2, 
+                 min_brake_duration=0.3, max_response_time=10.0):
+        
+        # 必须显式调用父类，且参数顺序为 (name, actor, terminate_on_failure)
+        super(BrokenDownVehicleBrakeCriterion, self).__init__(name, actor, terminate_on_failure=False)
+        
+        self.hazard_actor = hazard_actor
+        self.trigger_y = trigger_y
+        self.brake_threshold = brake_threshold
+        self.min_brake_duration = min_brake_duration
+        self.max_response_time = max_response_time
+        
+        self._activated = False
+        self._start_time = None
+        self._brake_start_time = None
+        self.test_status = "FAILURE"
+        
+        # 初始状态设为 RUNNING，确保它能被持续 Tick
+        self.status = py_trees.common.Status.RUNNING
+
+    def update(self):
+
+        ego_loc = self.actor.get_location()
+        current_time = GameTime.get_time()
+
+        # 触发逻辑
+        if not self._activated and ego_loc.y <= self.trigger_y:
+            self._activated = True
+
+        if self._activated and self.test_status != "SUCCESS":
+            control = self.actor.get_control()
+            if control.brake >= self.brake_threshold:
+                if self._brake_start_time is None:
+                    self._brake_start_time = current_time
+                
+                # 判定成功
+                if (current_time - self._brake_start_time) >= self.min_brake_duration:
+                    self.test_status = "SUCCESS" # 记录结果，但不 return SUCCESS
+            else:
+                self._brake_start_time = None
+
+        # 始终返回 RUNNING，确保它能一直 Tick 到底，直到 Parallel 节点整体结束
+        return py_trees.common.Status.RUNNING
+
+class BrokenDownVehicleBypassCriterion(Criterion):
+    """
+    判定自车是否成功绕行：
+    道路中心线：y = -12.0
+    行驶方向：x 轴负方向 (x 减小的方向)
+    """
+    def __init__(self, actor, hazard_actor, name="BypassCriterion", route_center_y=-12.0, lateral_threshold=1.5, pass_x_margin=3.0):
+        super(BrokenDownVehicleBypassCriterion, self).__init__(name, actor)
+        self.hazard_actor = hazard_actor
+        self.route_center_y = route_center_y  # 现在中心线是 y
+        self.lateral_threshold = lateral_threshold
+        self.pass_x_margin = pass_x_margin    # 绕过的距离判定改为 x 轴
+        self._has_departed = False
+        
+        self.test_status = "FAILURE"
+
+    def update(self):
+        ego_loc = self.actor.get_location()
+        hazard_loc = self.hazard_actor.get_location()
+        
+        # 1. 横向偏移：现在是 y 轴方向的偏离
+        lateral_offset = ego_loc.y - self.route_center_y
+        
+        # 2. 判定是否开始绕行（偏离 y = -12 中心线）
+        if not self._has_departed:
+            if abs(lateral_offset) >= self.lateral_threshold:
+                self._has_departed = True
+
+        # 3. 判定是否成功绕过
+        # 沿 x 负方向行驶，成功意味着：自车的 x < (障碍物的 x - 裕度)
+        if self._has_departed and self.test_status != "SUCCESS":
+            if ego_loc.x < (hazard_loc.x - self.pass_x_margin):
+                self.test_status = "SUCCESS" 
+
+        # 4. 失败判定：如果自车 x 已经越过障碍物但还没偏离中心线
+        # 注意：沿 x 负方向，“越过”意味着 ego.x < hazard.x
+        if not self._has_departed and ego_loc.x < hazard_loc.x:
+            self.test_status = "FAILURE"
+            return py_trees.common.Status.FAILURE
+
+        return py_trees.common.Status.RUNNING
+
+class BrokenDownVehicleResumeCriterion(Criterion):
+    """
+    判定自车是否回归中心并到达终点：
+    道路中心线：y = -12.0
+    行驶方向：沿 x 轴负方向
+    """
+    def __init__(self, actor, goal_location, name="ResumeCriterion", route_center_y=-12.0, goal_dist_threshold=5.0, 
+                 center_recover_threshold=2.0, min_resume_speed=1.0):
+        super(BrokenDownVehicleResumeCriterion, self).__init__(name, actor)
+        self.goal_location = goal_location
+        self.route_center_y = route_center_y  # 修改为 y 中心线
+        self.goal_dist_threshold = goal_dist_threshold
+        self.center_recover_threshold = center_recover_threshold
+        self.min_resume_speed = min_resume_speed
+        
+        # 初始设为失败
+        self.test_status = "FAILURE"
+
+    def update(self):
+        ego_loc = self.actor.get_location()
+        vel = self.actor.get_velocity()
+        
+        # 计算 3D 速度
+        ego_speed = math.sqrt(vel.x**2 + vel.y**2 + vel.z**2)
+        
+        # 实时监控进度
+        dist_to_goal = ego_loc.distance(self.goal_location)
+        # 横向偏移现在计算 y 轴差值
+        center_offset = abs(ego_loc.y - self.route_center_y)
+
+        # 判定逻辑：只有进入终点范围内才进行最终判定
+        if dist_to_goal <= self.goal_dist_threshold:
+            # 必须同时满足：1. 回到 y=-12 中心线附近 2. 还有速度
+            if center_offset <= self.center_recover_threshold and ego_speed >= self.min_resume_speed:
+                
+                self.test_status = "SUCCESS" 
+                return py_trees.common.Status.SUCCESS
+            else:
+                self.test_status = "FAILURE"
+                return py_trees.common.Status.FAILURE
+
+        return py_trees.common.Status.RUNNING
+    
 # Slanted motor and children criterion
 
 #reverse_vehicle private criterion

@@ -6368,6 +6368,814 @@
         </scenarios>
     </route>
     <!-- ========== scenario_class 8:avoid a disabled vehicle ========== -->
+    <!-- ========== level 3: init_speed=40 ========== -->
+    <route id="8" town="Town06">
+        <waypoints>
+
+            <position x="-62.7" y="-12.0" z="0.5" />
+            <position x="-64.7" y="-12.0" z="0.5" />
+            <position x="-66.7" y="-12.0" z="0.5" />
+            <position x="-68.7" y="-12.0" z="0.5" />
+            <position x="-70.7" y="-12.0" z="0.5" />
+            <position x="-72.7" y="-12.0" z="0.5" />
+            <position x="-74.7" y="-12.0" z="0.5" />
+            <position x="-76.7" y="-12.0" z="0.5" />
+            <position x="-78.7" y="-12.0" z="0.5" />
+            <position x="-80.7" y="-12.0" z="0.5" />
+            <position x="-82.7" y="-12.0" z="0.5" />
+            <position x="-84.7" y="-12.0" z="0.5" />
+            <position x="-86.7" y="-12.0" z="0.5" />
+            <position x="-88.7" y="-12.0" z="0.5" />
+            <position x="-90.7" y="-12.0" z="0.5" />
+            <position x="-92.7" y="-12.0" z="0.5" />
+            <position x="-94.7" y="-12.0" z="0.5" />
+            <position x="-96.7" y="-12.0" z="0.5" />
+            <position x="-98.7" y="-12.0" z="0.5" />
+            <position x="-100.7" y="-12.0" z="0.5" />
+            <position x="-102.7" y="-12.0" z="0.5" />
+            <position x="-104.7" y="-12.0" z="0.5" />
+            <position x="-106.7" y="-12.0" z="0.5" />
+            <position x="-108.7" y="-12.0" z="0.5" />
+            <position x="-110.7" y="-12.0" z="0.5" />
+            <position x="-112.7" y="-12.0" z="0.5" />
+            <position x="-114.7" y="-12.0" z="0.5" />
+            <position x="-116.7" y="-12.0" z="0.5" />
+            <position x="-118.7" y="-12.0" z="0.5" />
+            <position x="-120.7" y="-12.0" z="0.5" />
+            <position x="-122.7" y="-12.0" z="0.5" />
+            <position x="-124.7" y="-12.0" z="0.5" />
+            <position x="-126.7" y="-12.0" z="0.5" />
+            <position x="-128.7" y="-12.0" z="0.5" />
+            <position x="-130.7" y="-12.0" z="0.5" />
+            <position x="-132.7" y="-12.0" z="0.5" />
+            <position x="-134.7" y="-12.0" z="0.5" />
+            <position x="-136.7" y="-12.0" z="0.5" />
+            <position x="-138.7" y="-12.0" z="0.5" />
+            <position x="-140.7" y="-12.0" z="0.5" />
+            <position x="-142.7" y="-12.0" z="0.5" />
+            <position x="-144.7" y="-12.0" z="0.5" />
+            <position x="-146.7" y="-12.0" z="0.5" />
+            <position x="-148.7" y="-12.0" z="0.5" />
+            <position x="-150.7" y="-12.0" z="0.5" />
+            <position x="-152.7" y="-12.0" z="0.5" />
+
+        </waypoints>
+        <scenarios>
+            <scenario name="BrokenDownVehicle_S40_NR" type="BrokenDownVehicle" town="Town06">
+                <trigger_point x="-62.7" y="-12.0" z="0.5" yaw="-180.0"/>
+                <init_speed value="40.0" />
+                <other_actor x="-65.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.tesla.model3" />
+                <other_actor x="-52.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.audi.tt" />
+                <other_actor x="-73.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.bmw.grandtourer" />
+                <other_actor x="-122.7" y="-12.0" z="0" yaw="-180.0" model="static.prop.constructioncone" />
+                <other_actor x="-132.7" y="-12.0" z="0.5" yaw="-180.0" model="vehicle.volkswagen.t2" />
+            </scenario>
+        </scenarios>
+        <weathers>
+            <weather cloudiness="100.0" fog_density="20.0" precipitation="80.0" sun_altitude_angle="-90.0" />
+        </weathers>
+    </route>
+
+    <route id="9" town="Town06">
+        <waypoints>
+
+            <position x="-62.7" y="-12.0" z="0.5" />
+            <position x="-64.7" y="-12.0" z="0.5" />
+            <position x="-66.7" y="-12.0" z="0.5" />
+            <position x="-68.7" y="-12.0" z="0.5" />
+            <position x="-70.7" y="-12.0" z="0.5" />
+            <position x="-72.7" y="-12.0" z="0.5" />
+            <position x="-74.7" y="-12.0" z="0.5" />
+            <position x="-76.7" y="-12.0" z="0.5" />
+            <position x="-78.7" y="-12.0" z="0.5" />
+            <position x="-80.7" y="-12.0" z="0.5" />
+            <position x="-82.7" y="-12.0" z="0.5" />
+            <position x="-84.7" y="-12.0" z="0.5" />
+            <position x="-86.7" y="-12.0" z="0.5" />
+            <position x="-88.7" y="-12.0" z="0.5" />
+            <position x="-90.7" y="-12.0" z="0.5" />
+            <position x="-92.7" y="-12.0" z="0.5" />
+            <position x="-94.7" y="-12.0" z="0.5" />
+            <position x="-96.7" y="-12.0" z="0.5" />
+            <position x="-98.7" y="-12.0" z="0.5" />
+            <position x="-100.7" y="-12.0" z="0.5" />
+            <position x="-102.7" y="-12.0" z="0.5" />
+            <position x="-104.7" y="-12.0" z="0.5" />
+            <position x="-106.7" y="-12.0" z="0.5" />
+            <position x="-108.7" y="-12.0" z="0.5" />
+            <position x="-110.7" y="-12.0" z="0.5" />
+            <position x="-112.7" y="-12.0" z="0.5" />
+            <position x="-114.7" y="-12.0" z="0.5" />
+            <position x="-116.7" y="-12.0" z="0.5" />
+            <position x="-118.7" y="-12.0" z="0.5" />
+            <position x="-120.7" y="-12.0" z="0.5" />
+            <position x="-122.7" y="-12.0" z="0.5" />
+            <position x="-124.7" y="-12.0" z="0.5" />
+            <position x="-126.7" y="-12.0" z="0.5" />
+            <position x="-128.7" y="-12.0" z="0.5" />
+            <position x="-130.7" y="-12.0" z="0.5" />
+            <position x="-132.7" y="-12.0" z="0.5" />
+            <position x="-134.7" y="-12.0" z="0.5" />
+            <position x="-136.7" y="-12.0" z="0.5" />
+            <position x="-138.7" y="-12.0" z="0.5" />
+            <position x="-140.7" y="-12.0" z="0.5" />
+            <position x="-142.7" y="-12.0" z="0.5" />
+            <position x="-144.7" y="-12.0" z="0.5" />
+            <position x="-146.7" y="-12.0" z="0.5" />
+            <position x="-148.7" y="-12.0" z="0.5" />
+            <position x="-150.7" y="-12.0" z="0.5" />
+            <position x="-152.7" y="-12.0" z="0.5" />
+
+        </waypoints>
+        <scenarios>
+            <scenario name="BrokenDownVehicle_S40_NS" type="BrokenDownVehicle" town="Town06">
+                <trigger_point x="-62.7" y="-12.0" z="0.5" yaw="-180.0"/>
+                <init_speed value="40.0" />
+                <other_actor x="-65.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.tesla.model3" />
+                <other_actor x="-52.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.audi.tt" />
+                <other_actor x="-73.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.bmw.grandtourer" />
+                <other_actor x="-122.7" y="-12.0" z="0" yaw="-180.0" model="static.prop.constructioncone" />
+                <other_actor x="-132.7" y="-12.0" z="0.5" yaw="-180.0" model="vehicle.volkswagen.t2" />
+            </scenario>
+        </scenarios>
+        <weathers>
+            <weather cloudiness="0.0" fog_density="0.0" precipitation="0.0" sun_altitude_angle="-90.0" />
+        </weathers>
+    </route>
+
+    <route id="10" town="Town06">
+        <waypoints>
+
+            <position x="-62.7" y="-12.0" z="0.5" />
+            <position x="-64.7" y="-12.0" z="0.5" />
+            <position x="-66.7" y="-12.0" z="0.5" />
+            <position x="-68.7" y="-12.0" z="0.5" />
+            <position x="-70.7" y="-12.0" z="0.5" />
+            <position x="-72.7" y="-12.0" z="0.5" />
+            <position x="-74.7" y="-12.0" z="0.5" />
+            <position x="-76.7" y="-12.0" z="0.5" />
+            <position x="-78.7" y="-12.0" z="0.5" />
+            <position x="-80.7" y="-12.0" z="0.5" />
+            <position x="-82.7" y="-12.0" z="0.5" />
+            <position x="-84.7" y="-12.0" z="0.5" />
+            <position x="-86.7" y="-12.0" z="0.5" />
+            <position x="-88.7" y="-12.0" z="0.5" />
+            <position x="-90.7" y="-12.0" z="0.5" />
+            <position x="-92.7" y="-12.0" z="0.5" />
+            <position x="-94.7" y="-12.0" z="0.5" />
+            <position x="-96.7" y="-12.0" z="0.5" />
+            <position x="-98.7" y="-12.0" z="0.5" />
+            <position x="-100.7" y="-12.0" z="0.5" />
+            <position x="-102.7" y="-12.0" z="0.5" />
+            <position x="-104.7" y="-12.0" z="0.5" />
+            <position x="-106.7" y="-12.0" z="0.5" />
+            <position x="-108.7" y="-12.0" z="0.5" />
+            <position x="-110.7" y="-12.0" z="0.5" />
+            <position x="-112.7" y="-12.0" z="0.5" />
+            <position x="-114.7" y="-12.0" z="0.5" />
+            <position x="-116.7" y="-12.0" z="0.5" />
+            <position x="-118.7" y="-12.0" z="0.5" />
+            <position x="-120.7" y="-12.0" z="0.5" />
+            <position x="-122.7" y="-12.0" z="0.5" />
+            <position x="-124.7" y="-12.0" z="0.5" />
+            <position x="-126.7" y="-12.0" z="0.5" />
+            <position x="-128.7" y="-12.0" z="0.5" />
+            <position x="-130.7" y="-12.0" z="0.5" />
+            <position x="-132.7" y="-12.0" z="0.5" />
+            <position x="-134.7" y="-12.0" z="0.5" />
+            <position x="-136.7" y="-12.0" z="0.5" />
+            <position x="-138.7" y="-12.0" z="0.5" />
+            <position x="-140.7" y="-12.0" z="0.5" />
+            <position x="-142.7" y="-12.0" z="0.5" />
+            <position x="-144.7" y="-12.0" z="0.5" />
+            <position x="-146.7" y="-12.0" z="0.5" />
+            <position x="-148.7" y="-12.0" z="0.5" />
+            <position x="-150.7" y="-12.0" z="0.5" />
+            <position x="-152.7" y="-12.0" z="0.5" />
+
+        </waypoints>
+        <scenarios>
+            <scenario name="BrokenDownVehicle_S40_DR" type="BrokenDownVehicle" town="Town06">
+                <trigger_point x="-62.7" y="-12.0" z="0.5" yaw="-180.0"/>
+                <init_speed value="40.0" />
+                <other_actor x="-65.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.tesla.model3" />
+                <other_actor x="-52.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.audi.tt" />
+                <other_actor x="-73.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.bmw.grandtourer" />
+                <other_actor x="-122.7" y="-12.0" z="0" yaw="-180.0" model="static.prop.constructioncone" />
+                <other_actor x="-132.7" y="-12.0" z="0.5" yaw="-180.0" model="vehicle.volkswagen.t2" />
+            </scenario>
+        </scenarios>
+        <weathers>
+            <weather cloudiness="100.0" fog_density="10.0" precipitation="80.0" sun_altitude_angle="45.0" />
+        </weathers>
+    </route>
+
+    <route id="11" town="Town06">
+        <waypoints>
+
+            <position x="-62.7" y="-12.0" z="0.5" />
+            <position x="-64.7" y="-12.0" z="0.5" />
+            <position x="-66.7" y="-12.0" z="0.5" />
+            <position x="-68.7" y="-12.0" z="0.5" />
+            <position x="-70.7" y="-12.0" z="0.5" />
+            <position x="-72.7" y="-12.0" z="0.5" />
+            <position x="-74.7" y="-12.0" z="0.5" />
+            <position x="-76.7" y="-12.0" z="0.5" />
+            <position x="-78.7" y="-12.0" z="0.5" />
+            <position x="-80.7" y="-12.0" z="0.5" />
+            <position x="-82.7" y="-12.0" z="0.5" />
+            <position x="-84.7" y="-12.0" z="0.5" />
+            <position x="-86.7" y="-12.0" z="0.5" />
+            <position x="-88.7" y="-12.0" z="0.5" />
+            <position x="-90.7" y="-12.0" z="0.5" />
+            <position x="-92.7" y="-12.0" z="0.5" />
+            <position x="-94.7" y="-12.0" z="0.5" />
+            <position x="-96.7" y="-12.0" z="0.5" />
+            <position x="-98.7" y="-12.0" z="0.5" />
+            <position x="-100.7" y="-12.0" z="0.5" />
+            <position x="-102.7" y="-12.0" z="0.5" />
+            <position x="-104.7" y="-12.0" z="0.5" />
+            <position x="-106.7" y="-12.0" z="0.5" />
+            <position x="-108.7" y="-12.0" z="0.5" />
+            <position x="-110.7" y="-12.0" z="0.5" />
+            <position x="-112.7" y="-12.0" z="0.5" />
+            <position x="-114.7" y="-12.0" z="0.5" />
+            <position x="-116.7" y="-12.0" z="0.5" />
+            <position x="-118.7" y="-12.0" z="0.5" />
+            <position x="-120.7" y="-12.0" z="0.5" />
+            <position x="-122.7" y="-12.0" z="0.5" />
+            <position x="-124.7" y="-12.0" z="0.5" />
+            <position x="-126.7" y="-12.0" z="0.5" />
+            <position x="-128.7" y="-12.0" z="0.5" />
+            <position x="-130.7" y="-12.0" z="0.5" />
+            <position x="-132.7" y="-12.0" z="0.5" />
+            <position x="-134.7" y="-12.0" z="0.5" />
+            <position x="-136.7" y="-12.0" z="0.5" />
+            <position x="-138.7" y="-12.0" z="0.5" />
+            <position x="-140.7" y="-12.0" z="0.5" />
+            <position x="-142.7" y="-12.0" z="0.5" />
+            <position x="-144.7" y="-12.0" z="0.5" />
+            <position x="-146.7" y="-12.0" z="0.5" />
+            <position x="-148.7" y="-12.0" z="0.5" />
+            <position x="-150.7" y="-12.0" z="0.5" />
+            <position x="-152.7" y="-12.0" z="0.5" />
+
+        </waypoints>
+        <scenarios>
+            <scenario name="BrokenDownVehicle_S40_DS" type="BrokenDownVehicle" town="Town06">
+                <trigger_point x="-62.7" y="-12.0" z="0.5" yaw="-180.0"/>
+                <init_speed value="40.0" />
+                <other_actor x="-65.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.tesla.model3" />
+                <other_actor x="-52.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.audi.tt" />
+                <other_actor x="-73.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.bmw.grandtourer" />
+                <other_actor x="-122.7" y="-12.0" z="0" yaw="-180.0" model="static.prop.constructioncone" />
+                <other_actor x="-132.7" y="-12.0" z="0.5" yaw="-180.0" model="vehicle.volkswagen.t2" />
+            </scenario>
+        </scenarios>
+        <weathers>
+            <weather cloudiness="10.0" fog_density="0.0" precipitation="0.0" sun_altitude_angle="45.0" />
+        </weathers>
+    </route>
+
+    <!-- ========== level 2: init_speed=30 ========== -->
+     <route id="4" town="Town06">
+        <waypoints>
+
+            <position x="-62.7" y="-12.0" z="0.5" />
+            <position x="-64.7" y="-12.0" z="0.5" />
+            <position x="-66.7" y="-12.0" z="0.5" />
+            <position x="-68.7" y="-12.0" z="0.5" />
+            <position x="-70.7" y="-12.0" z="0.5" />
+            <position x="-72.7" y="-12.0" z="0.5" />
+            <position x="-74.7" y="-12.0" z="0.5" />
+            <position x="-76.7" y="-12.0" z="0.5" />
+            <position x="-78.7" y="-12.0" z="0.5" />
+            <position x="-80.7" y="-12.0" z="0.5" />
+            <position x="-82.7" y="-12.0" z="0.5" />
+            <position x="-84.7" y="-12.0" z="0.5" />
+            <position x="-86.7" y="-12.0" z="0.5" />
+            <position x="-88.7" y="-12.0" z="0.5" />
+            <position x="-90.7" y="-12.0" z="0.5" />
+            <position x="-92.7" y="-12.0" z="0.5" />
+            <position x="-94.7" y="-12.0" z="0.5" />
+            <position x="-96.7" y="-12.0" z="0.5" />
+            <position x="-98.7" y="-12.0" z="0.5" />
+            <position x="-100.7" y="-12.0" z="0.5" />
+            <position x="-102.7" y="-12.0" z="0.5" />
+            <position x="-104.7" y="-12.0" z="0.5" />
+            <position x="-106.7" y="-12.0" z="0.5" />
+            <position x="-108.7" y="-12.0" z="0.5" />
+            <position x="-110.7" y="-12.0" z="0.5" />
+            <position x="-112.7" y="-12.0" z="0.5" />
+            <position x="-114.7" y="-12.0" z="0.5" />
+            <position x="-116.7" y="-12.0" z="0.5" />
+            <position x="-118.7" y="-12.0" z="0.5" />
+            <position x="-120.7" y="-12.0" z="0.5" />
+            <position x="-122.7" y="-12.0" z="0.5" />
+            <position x="-124.7" y="-12.0" z="0.5" />
+            <position x="-126.7" y="-12.0" z="0.5" />
+            <position x="-128.7" y="-12.0" z="0.5" />
+            <position x="-130.7" y="-12.0" z="0.5" />
+            <position x="-132.7" y="-12.0" z="0.5" />
+            <position x="-134.7" y="-12.0" z="0.5" />
+            <position x="-136.7" y="-12.0" z="0.5" />
+            <position x="-138.7" y="-12.0" z="0.5" />
+            <position x="-140.7" y="-12.0" z="0.5" />
+            <position x="-142.7" y="-12.0" z="0.5" />
+            <position x="-144.7" y="-12.0" z="0.5" />
+            <position x="-146.7" y="-12.0" z="0.5" />
+            <position x="-148.7" y="-12.0" z="0.5" />
+            <position x="-150.7" y="-12.0" z="0.5" />
+            <position x="-152.7" y="-12.0" z="0.5" />
+
+        </waypoints>
+        <scenarios>
+            <scenario name="BrokenDownVehicle_S30_NR" type="BrokenDownVehicle" town="Town06">
+                <trigger_point x="-62.7" y="-12.0" z="0.5" yaw="-180.0"/>
+                <init_speed value="30.0" />
+                <other_actor x="-65.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.tesla.model3" />
+                <other_actor x="-52.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.audi.tt" />
+                <other_actor x="-73.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.bmw.grandtourer" />
+                <other_actor x="-122.7" y="-12.0" z="0" yaw="-180.0" model="static.prop.constructioncone" />
+                <other_actor x="-132.7" y="-12.0" z="0.5" yaw="-180.0" model="vehicle.volkswagen.t2" />
+            </scenario>
+        </scenarios>
+        <weathers>
+            <weather cloudiness="100.0" fog_density="20.0" precipitation="80.0" sun_altitude_angle="-90.0" />
+        </weathers>
+    </route>
+
+    <route id="5" town="Town06">
+        <waypoints>
+
+            <position x="-62.7" y="-12.0" z="0.5" />
+            <position x="-64.7" y="-12.0" z="0.5" />
+            <position x="-66.7" y="-12.0" z="0.5" />
+            <position x="-68.7" y="-12.0" z="0.5" />
+            <position x="-70.7" y="-12.0" z="0.5" />
+            <position x="-72.7" y="-12.0" z="0.5" />
+            <position x="-74.7" y="-12.0" z="0.5" />
+            <position x="-76.7" y="-12.0" z="0.5" />
+            <position x="-78.7" y="-12.0" z="0.5" />
+            <position x="-80.7" y="-12.0" z="0.5" />
+            <position x="-82.7" y="-12.0" z="0.5" />
+            <position x="-84.7" y="-12.0" z="0.5" />
+            <position x="-86.7" y="-12.0" z="0.5" />
+            <position x="-88.7" y="-12.0" z="0.5" />
+            <position x="-90.7" y="-12.0" z="0.5" />
+            <position x="-92.7" y="-12.0" z="0.5" />
+            <position x="-94.7" y="-12.0" z="0.5" />
+            <position x="-96.7" y="-12.0" z="0.5" />
+            <position x="-98.7" y="-12.0" z="0.5" />
+            <position x="-100.7" y="-12.0" z="0.5" />
+            <position x="-102.7" y="-12.0" z="0.5" />
+            <position x="-104.7" y="-12.0" z="0.5" />
+            <position x="-106.7" y="-12.0" z="0.5" />
+            <position x="-108.7" y="-12.0" z="0.5" />
+            <position x="-110.7" y="-12.0" z="0.5" />
+            <position x="-112.7" y="-12.0" z="0.5" />
+            <position x="-114.7" y="-12.0" z="0.5" />
+            <position x="-116.7" y="-12.0" z="0.5" />
+            <position x="-118.7" y="-12.0" z="0.5" />
+            <position x="-120.7" y="-12.0" z="0.5" />
+            <position x="-122.7" y="-12.0" z="0.5" />
+            <position x="-124.7" y="-12.0" z="0.5" />
+            <position x="-126.7" y="-12.0" z="0.5" />
+            <position x="-128.7" y="-12.0" z="0.5" />
+            <position x="-130.7" y="-12.0" z="0.5" />
+            <position x="-132.7" y="-12.0" z="0.5" />
+            <position x="-134.7" y="-12.0" z="0.5" />
+            <position x="-136.7" y="-12.0" z="0.5" />
+            <position x="-138.7" y="-12.0" z="0.5" />
+            <position x="-140.7" y="-12.0" z="0.5" />
+            <position x="-142.7" y="-12.0" z="0.5" />
+            <position x="-144.7" y="-12.0" z="0.5" />
+            <position x="-146.7" y="-12.0" z="0.5" />
+            <position x="-148.7" y="-12.0" z="0.5" />
+            <position x="-150.7" y="-12.0" z="0.5" />
+            <position x="-152.7" y="-12.0" z="0.5" />
+
+        </waypoints>
+        <scenarios>
+            <scenario name="BrokenDownVehicle_S30_NS" type="BrokenDownVehicle" town="Town06">
+                <trigger_point x="-62.7" y="-12.0" z="0.5" yaw="-180.0"/>
+                <init_speed value="30.0" />
+                <other_actor x="-65.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.tesla.model3" />
+                <other_actor x="-52.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.audi.tt" />
+                <other_actor x="-73.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.bmw.grandtourer" />
+                <other_actor x="-122.7" y="-12.0" z="0" yaw="-180.0" model="static.prop.constructioncone" />
+                <other_actor x="-132.7" y="-12.0" z="0.5" yaw="-180.0" model="vehicle.volkswagen.t2" />
+            </scenario>
+        </scenarios>
+        <weathers>
+            <weather cloudiness="0.0" fog_density="0.0" precipitation="0.0" sun_altitude_angle="-90.0" />
+        </weathers>
+    </route>
+
+    <route id="6" town="Town06">
+        <waypoints>
+
+            <position x="-62.7" y="-12.0" z="0.5" />
+            <position x="-64.7" y="-12.0" z="0.5" />
+            <position x="-66.7" y="-12.0" z="0.5" />
+            <position x="-68.7" y="-12.0" z="0.5" />
+            <position x="-70.7" y="-12.0" z="0.5" />
+            <position x="-72.7" y="-12.0" z="0.5" />
+            <position x="-74.7" y="-12.0" z="0.5" />
+            <position x="-76.7" y="-12.0" z="0.5" />
+            <position x="-78.7" y="-12.0" z="0.5" />
+            <position x="-80.7" y="-12.0" z="0.5" />
+            <position x="-82.7" y="-12.0" z="0.5" />
+            <position x="-84.7" y="-12.0" z="0.5" />
+            <position x="-86.7" y="-12.0" z="0.5" />
+            <position x="-88.7" y="-12.0" z="0.5" />
+            <position x="-90.7" y="-12.0" z="0.5" />
+            <position x="-92.7" y="-12.0" z="0.5" />
+            <position x="-94.7" y="-12.0" z="0.5" />
+            <position x="-96.7" y="-12.0" z="0.5" />
+            <position x="-98.7" y="-12.0" z="0.5" />
+            <position x="-100.7" y="-12.0" z="0.5" />
+            <position x="-102.7" y="-12.0" z="0.5" />
+            <position x="-104.7" y="-12.0" z="0.5" />
+            <position x="-106.7" y="-12.0" z="0.5" />
+            <position x="-108.7" y="-12.0" z="0.5" />
+            <position x="-110.7" y="-12.0" z="0.5" />
+            <position x="-112.7" y="-12.0" z="0.5" />
+            <position x="-114.7" y="-12.0" z="0.5" />
+            <position x="-116.7" y="-12.0" z="0.5" />
+            <position x="-118.7" y="-12.0" z="0.5" />
+            <position x="-120.7" y="-12.0" z="0.5" />
+            <position x="-122.7" y="-12.0" z="0.5" />
+            <position x="-124.7" y="-12.0" z="0.5" />
+            <position x="-126.7" y="-12.0" z="0.5" />
+            <position x="-128.7" y="-12.0" z="0.5" />
+            <position x="-130.7" y="-12.0" z="0.5" />
+            <position x="-132.7" y="-12.0" z="0.5" />
+            <position x="-134.7" y="-12.0" z="0.5" />
+            <position x="-136.7" y="-12.0" z="0.5" />
+            <position x="-138.7" y="-12.0" z="0.5" />
+            <position x="-140.7" y="-12.0" z="0.5" />
+            <position x="-142.7" y="-12.0" z="0.5" />
+            <position x="-144.7" y="-12.0" z="0.5" />
+            <position x="-146.7" y="-12.0" z="0.5" />
+            <position x="-148.7" y="-12.0" z="0.5" />
+            <position x="-150.7" y="-12.0" z="0.5" />
+            <position x="-152.7" y="-12.0" z="0.5" />
+
+        </waypoints>
+        <scenarios>
+            <scenario name="BrokenDownVehicle_S30_DR" type="BrokenDownVehicle" town="Town06">
+                <trigger_point x="-62.7" y="-12.0" z="0.5" yaw="-180.0"/>
+                <init_speed value="30.0" />
+                <other_actor x="-65.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.tesla.model3" />
+                <other_actor x="-52.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.audi.tt" />
+                <other_actor x="-73.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.bmw.grandtourer" />
+                <other_actor x="-122.7" y="-12.0" z="0" yaw="-180.0" model="static.prop.constructioncone" />
+                <other_actor x="-132.7" y="-12.0" z="0.5" yaw="-180.0" model="vehicle.volkswagen.t2" />
+            </scenario>
+        </scenarios>
+        <weathers>
+            <weather cloudiness="100.0" fog_density="10.0" precipitation="80.0" sun_altitude_angle="45.0" />
+        </weathers>
+    </route>
+
+    <route id="7" town="Town06">
+        <waypoints>
+
+            <position x="-62.7" y="-12.0" z="0.5" />
+            <position x="-64.7" y="-12.0" z="0.5" />
+            <position x="-66.7" y="-12.0" z="0.5" />
+            <position x="-68.7" y="-12.0" z="0.5" />
+            <position x="-70.7" y="-12.0" z="0.5" />
+            <position x="-72.7" y="-12.0" z="0.5" />
+            <position x="-74.7" y="-12.0" z="0.5" />
+            <position x="-76.7" y="-12.0" z="0.5" />
+            <position x="-78.7" y="-12.0" z="0.5" />
+            <position x="-80.7" y="-12.0" z="0.5" />
+            <position x="-82.7" y="-12.0" z="0.5" />
+            <position x="-84.7" y="-12.0" z="0.5" />
+            <position x="-86.7" y="-12.0" z="0.5" />
+            <position x="-88.7" y="-12.0" z="0.5" />
+            <position x="-90.7" y="-12.0" z="0.5" />
+            <position x="-92.7" y="-12.0" z="0.5" />
+            <position x="-94.7" y="-12.0" z="0.5" />
+            <position x="-96.7" y="-12.0" z="0.5" />
+            <position x="-98.7" y="-12.0" z="0.5" />
+            <position x="-100.7" y="-12.0" z="0.5" />
+            <position x="-102.7" y="-12.0" z="0.5" />
+            <position x="-104.7" y="-12.0" z="0.5" />
+            <position x="-106.7" y="-12.0" z="0.5" />
+            <position x="-108.7" y="-12.0" z="0.5" />
+            <position x="-110.7" y="-12.0" z="0.5" />
+            <position x="-112.7" y="-12.0" z="0.5" />
+            <position x="-114.7" y="-12.0" z="0.5" />
+            <position x="-116.7" y="-12.0" z="0.5" />
+            <position x="-118.7" y="-12.0" z="0.5" />
+            <position x="-120.7" y="-12.0" z="0.5" />
+            <position x="-122.7" y="-12.0" z="0.5" />
+            <position x="-124.7" y="-12.0" z="0.5" />
+            <position x="-126.7" y="-12.0" z="0.5" />
+            <position x="-128.7" y="-12.0" z="0.5" />
+            <position x="-130.7" y="-12.0" z="0.5" />
+            <position x="-132.7" y="-12.0" z="0.5" />
+            <position x="-134.7" y="-12.0" z="0.5" />
+            <position x="-136.7" y="-12.0" z="0.5" />
+            <position x="-138.7" y="-12.0" z="0.5" />
+            <position x="-140.7" y="-12.0" z="0.5" />
+            <position x="-142.7" y="-12.0" z="0.5" />
+            <position x="-144.7" y="-12.0" z="0.5" />
+            <position x="-146.7" y="-12.0" z="0.5" />
+            <position x="-148.7" y="-12.0" z="0.5" />
+            <position x="-150.7" y="-12.0" z="0.5" />
+            <position x="-152.7" y="-12.0" z="0.5" />
+
+        </waypoints>
+        <scenarios>
+            <scenario name="BrokenDownVehicle_S30_DS" type="BrokenDownVehicle" town="Town06">
+                <trigger_point x="-62.7" y="-12.0" z="0.5" yaw="-180.0"/>
+                <init_speed value="30.0" />
+                <other_actor x="-65.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.tesla.model3" />
+                <other_actor x="-52.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.audi.tt" />
+                <other_actor x="-73.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.bmw.grandtourer" />
+                <other_actor x="-122.7" y="-12.0" z="0" yaw="-180.0" model="static.prop.constructioncone" />
+                <other_actor x="-132.7" y="-12.0" z="0.5" yaw="-180.0" model="vehicle.volkswagen.t2" />
+            </scenario>
+        </scenarios>
+        <weathers>
+            <weather cloudiness="10.0" fog_density="0.0" precipitation="0.0" sun_altitude_angle="45.0" />
+        </weathers>
+    </route>
+
+    <!-- ========== level 1: init_speed=20 ========== -->
+    <route id="0" town="Town06">
+        <waypoints>
+
+            <position x="-62.7" y="-12.0" z="0.5" />
+            <position x="-64.7" y="-12.0" z="0.5" />
+            <position x="-66.7" y="-12.0" z="0.5" />
+            <position x="-68.7" y="-12.0" z="0.5" />
+            <position x="-70.7" y="-12.0" z="0.5" />
+            <position x="-72.7" y="-12.0" z="0.5" />
+            <position x="-74.7" y="-12.0" z="0.5" />
+            <position x="-76.7" y="-12.0" z="0.5" />
+            <position x="-78.7" y="-12.0" z="0.5" />
+            <position x="-80.7" y="-12.0" z="0.5" />
+            <position x="-82.7" y="-12.0" z="0.5" />
+            <position x="-84.7" y="-12.0" z="0.5" />
+            <position x="-86.7" y="-12.0" z="0.5" />
+            <position x="-88.7" y="-12.0" z="0.5" />
+            <position x="-90.7" y="-12.0" z="0.5" />
+            <position x="-92.7" y="-12.0" z="0.5" />
+            <position x="-94.7" y="-12.0" z="0.5" />
+            <position x="-96.7" y="-12.0" z="0.5" />
+            <position x="-98.7" y="-12.0" z="0.5" />
+            <position x="-100.7" y="-12.0" z="0.5" />
+            <position x="-102.7" y="-12.0" z="0.5" />
+            <position x="-104.7" y="-12.0" z="0.5" />
+            <position x="-106.7" y="-12.0" z="0.5" />
+            <position x="-108.7" y="-12.0" z="0.5" />
+            <position x="-110.7" y="-12.0" z="0.5" />
+            <position x="-112.7" y="-12.0" z="0.5" />
+            <position x="-114.7" y="-12.0" z="0.5" />
+            <position x="-116.7" y="-12.0" z="0.5" />
+            <position x="-118.7" y="-12.0" z="0.5" />
+            <position x="-120.7" y="-12.0" z="0.5" />
+            <position x="-122.7" y="-12.0" z="0.5" />
+            <position x="-124.7" y="-12.0" z="0.5" />
+            <position x="-126.7" y="-12.0" z="0.5" />
+            <position x="-128.7" y="-12.0" z="0.5" />
+            <position x="-130.7" y="-12.0" z="0.5" />
+            <position x="-132.7" y="-12.0" z="0.5" />
+            <position x="-134.7" y="-12.0" z="0.5" />
+            <position x="-136.7" y="-12.0" z="0.5" />
+            <position x="-138.7" y="-12.0" z="0.5" />
+            <position x="-140.7" y="-12.0" z="0.5" />
+            <position x="-142.7" y="-12.0" z="0.5" />
+            <position x="-144.7" y="-12.0" z="0.5" />
+            <position x="-146.7" y="-12.0" z="0.5" />
+            <position x="-148.7" y="-12.0" z="0.5" />
+            <position x="-150.7" y="-12.0" z="0.5" />
+            <position x="-152.7" y="-12.0" z="0.5" />
+
+        </waypoints>
+        <scenarios>
+            <scenario name="BrokenDownVehicle_S20_NR" type="BrokenDownVehicle" town="Town06">
+                <trigger_point x="-62.7" y="-12.0" z="0.5" yaw="-180.0"/>
+                <init_speed value="20.0" />
+                <other_actor x="-65.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.tesla.model3" />
+                <other_actor x="-52.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.audi.tt" />
+                <other_actor x="-73.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.bmw.grandtourer" />
+                <other_actor x="-122.7" y="-12.0" z="0" yaw="-180.0" model="static.prop.constructioncone" />
+                <other_actor x="-132.7" y="-12.0" z="0.5" yaw="-180.0" model="vehicle.volkswagen.t2" />
+            </scenario>
+        </scenarios>
+        <weathers>
+            <weather cloudiness="100.0" fog_density="20.0" precipitation="80.0" sun_altitude_angle="-90.0" />
+        </weathers>
+    </route>
+
+    <route id="1" town="Town06">
+        <waypoints>
+
+            <position x="-62.7" y="-12.0" z="0.5" />
+            <position x="-64.7" y="-12.0" z="0.5" />
+            <position x="-66.7" y="-12.0" z="0.5" />
+            <position x="-68.7" y="-12.0" z="0.5" />
+            <position x="-70.7" y="-12.0" z="0.5" />
+            <position x="-72.7" y="-12.0" z="0.5" />
+            <position x="-74.7" y="-12.0" z="0.5" />
+            <position x="-76.7" y="-12.0" z="0.5" />
+            <position x="-78.7" y="-12.0" z="0.5" />
+            <position x="-80.7" y="-12.0" z="0.5" />
+            <position x="-82.7" y="-12.0" z="0.5" />
+            <position x="-84.7" y="-12.0" z="0.5" />
+            <position x="-86.7" y="-12.0" z="0.5" />
+            <position x="-88.7" y="-12.0" z="0.5" />
+            <position x="-90.7" y="-12.0" z="0.5" />
+            <position x="-92.7" y="-12.0" z="0.5" />
+            <position x="-94.7" y="-12.0" z="0.5" />
+            <position x="-96.7" y="-12.0" z="0.5" />
+            <position x="-98.7" y="-12.0" z="0.5" />
+            <position x="-100.7" y="-12.0" z="0.5" />
+            <position x="-102.7" y="-12.0" z="0.5" />
+            <position x="-104.7" y="-12.0" z="0.5" />
+            <position x="-106.7" y="-12.0" z="0.5" />
+            <position x="-108.7" y="-12.0" z="0.5" />
+            <position x="-110.7" y="-12.0" z="0.5" />
+            <position x="-112.7" y="-12.0" z="0.5" />
+            <position x="-114.7" y="-12.0" z="0.5" />
+            <position x="-116.7" y="-12.0" z="0.5" />
+            <position x="-118.7" y="-12.0" z="0.5" />
+            <position x="-120.7" y="-12.0" z="0.5" />
+            <position x="-122.7" y="-12.0" z="0.5" />
+            <position x="-124.7" y="-12.0" z="0.5" />
+            <position x="-126.7" y="-12.0" z="0.5" />
+            <position x="-128.7" y="-12.0" z="0.5" />
+            <position x="-130.7" y="-12.0" z="0.5" />
+            <position x="-132.7" y="-12.0" z="0.5" />
+            <position x="-134.7" y="-12.0" z="0.5" />
+            <position x="-136.7" y="-12.0" z="0.5" />
+            <position x="-138.7" y="-12.0" z="0.5" />
+            <position x="-140.7" y="-12.0" z="0.5" />
+            <position x="-142.7" y="-12.0" z="0.5" />
+            <position x="-144.7" y="-12.0" z="0.5" />
+            <position x="-146.7" y="-12.0" z="0.5" />
+            <position x="-148.7" y="-12.0" z="0.5" />
+            <position x="-150.7" y="-12.0" z="0.5" />
+            <position x="-152.7" y="-12.0" z="0.5" />
+
+        </waypoints>
+        <scenarios>
+            <scenario name="BrokenDownVehicle_S20_NS" type="BrokenDownVehicle" town="Town06">
+                <trigger_point x="-62.7" y="-12.0" z="0.5" yaw="-180.0"/>
+                <init_speed value="20.0" />
+                <other_actor x="-65.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.tesla.model3" />
+                <other_actor x="-52.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.audi.tt" />
+                <other_actor x="-73.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.bmw.grandtourer" />
+                <other_actor x="-122.7" y="-12.0" z="0" yaw="-180.0" model="static.prop.constructioncone" />
+                <other_actor x="-132.7" y="-12.0" z="0.5" yaw="-180.0" model="vehicle.volkswagen.t2" />
+            </scenario>
+        </scenarios>
+        <weathers>
+            <weather cloudiness="0.0" fog_density="0.0" precipitation="0.0" sun_altitude_angle="-90.0" />
+        </weathers>
+    </route>
+
+    <route id="2" town="Town06">
+        <waypoints>
+
+            <position x="-62.7" y="-12.0" z="0.5" />
+            <position x="-64.7" y="-12.0" z="0.5" />
+            <position x="-66.7" y="-12.0" z="0.5" />
+            <position x="-68.7" y="-12.0" z="0.5" />
+            <position x="-70.7" y="-12.0" z="0.5" />
+            <position x="-72.7" y="-12.0" z="0.5" />
+            <position x="-74.7" y="-12.0" z="0.5" />
+            <position x="-76.7" y="-12.0" z="0.5" />
+            <position x="-78.7" y="-12.0" z="0.5" />
+            <position x="-80.7" y="-12.0" z="0.5" />
+            <position x="-82.7" y="-12.0" z="0.5" />
+            <position x="-84.7" y="-12.0" z="0.5" />
+            <position x="-86.7" y="-12.0" z="0.5" />
+            <position x="-88.7" y="-12.0" z="0.5" />
+            <position x="-90.7" y="-12.0" z="0.5" />
+            <position x="-92.7" y="-12.0" z="0.5" />
+            <position x="-94.7" y="-12.0" z="0.5" />
+            <position x="-96.7" y="-12.0" z="0.5" />
+            <position x="-98.7" y="-12.0" z="0.5" />
+            <position x="-100.7" y="-12.0" z="0.5" />
+            <position x="-102.7" y="-12.0" z="0.5" />
+            <position x="-104.7" y="-12.0" z="0.5" />
+            <position x="-106.7" y="-12.0" z="0.5" />
+            <position x="-108.7" y="-12.0" z="0.5" />
+            <position x="-110.7" y="-12.0" z="0.5" />
+            <position x="-112.7" y="-12.0" z="0.5" />
+            <position x="-114.7" y="-12.0" z="0.5" />
+            <position x="-116.7" y="-12.0" z="0.5" />
+            <position x="-118.7" y="-12.0" z="0.5" />
+            <position x="-120.7" y="-12.0" z="0.5" />
+            <position x="-122.7" y="-12.0" z="0.5" />
+            <position x="-124.7" y="-12.0" z="0.5" />
+            <position x="-126.7" y="-12.0" z="0.5" />
+            <position x="-128.7" y="-12.0" z="0.5" />
+            <position x="-130.7" y="-12.0" z="0.5" />
+            <position x="-132.7" y="-12.0" z="0.5" />
+            <position x="-134.7" y="-12.0" z="0.5" />
+            <position x="-136.7" y="-12.0" z="0.5" />
+            <position x="-138.7" y="-12.0" z="0.5" />
+            <position x="-140.7" y="-12.0" z="0.5" />
+            <position x="-142.7" y="-12.0" z="0.5" />
+            <position x="-144.7" y="-12.0" z="0.5" />
+            <position x="-146.7" y="-12.0" z="0.5" />
+            <position x="-148.7" y="-12.0" z="0.5" />
+            <position x="-150.7" y="-12.0" z="0.5" />
+            <position x="-152.7" y="-12.0" z="0.5" />
+
+        </waypoints>
+        <scenarios>
+            <scenario name="BrokenDownVehicle_S20_DR" type="BrokenDownVehicle" town="Town06">
+                <trigger_point x="-62.7" y="-12.0" z="0.5" yaw="-180.0"/>
+                <init_speed value="20.0" />
+                <other_actor x="-65.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.tesla.model3" />
+                <other_actor x="-52.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.audi.tt" />
+                <other_actor x="-73.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.bmw.grandtourer" />
+                <other_actor x="-122.7" y="-12.0" z="0" yaw="-180.0" model="static.prop.constructioncone" />
+                <other_actor x="-132.7" y="-12.0" z="0.5" yaw="-180.0" model="vehicle.volkswagen.t2" />
+            </scenario>
+        </scenarios>
+        <weathers>
+            <weather cloudiness="100.0" fog_density="10.0" precipitation="80.0" sun_altitude_angle="45.0" />
+        </weathers>
+    </route>
+
+    <route id="3" town="Town06">
+        <waypoints>
+
+            <position x="-62.7" y="-12.0" z="0.5" />
+            <position x="-64.7" y="-12.0" z="0.5" />
+            <position x="-66.7" y="-12.0" z="0.5" />
+            <position x="-68.7" y="-12.0" z="0.5" />
+            <position x="-70.7" y="-12.0" z="0.5" />
+            <position x="-72.7" y="-12.0" z="0.5" />
+            <position x="-74.7" y="-12.0" z="0.5" />
+            <position x="-76.7" y="-12.0" z="0.5" />
+            <position x="-78.7" y="-12.0" z="0.5" />
+            <position x="-80.7" y="-12.0" z="0.5" />
+            <position x="-82.7" y="-12.0" z="0.5" />
+            <position x="-84.7" y="-12.0" z="0.5" />
+            <position x="-86.7" y="-12.0" z="0.5" />
+            <position x="-88.7" y="-12.0" z="0.5" />
+            <position x="-90.7" y="-12.0" z="0.5" />
+            <position x="-92.7" y="-12.0" z="0.5" />
+            <position x="-94.7" y="-12.0" z="0.5" />
+            <position x="-96.7" y="-12.0" z="0.5" />
+            <position x="-98.7" y="-12.0" z="0.5" />
+            <position x="-100.7" y="-12.0" z="0.5" />
+            <position x="-102.7" y="-12.0" z="0.5" />
+            <position x="-104.7" y="-12.0" z="0.5" />
+            <position x="-106.7" y="-12.0" z="0.5" />
+            <position x="-108.7" y="-12.0" z="0.5" />
+            <position x="-110.7" y="-12.0" z="0.5" />
+            <position x="-112.7" y="-12.0" z="0.5" />
+            <position x="-114.7" y="-12.0" z="0.5" />
+            <position x="-116.7" y="-12.0" z="0.5" />
+            <position x="-118.7" y="-12.0" z="0.5" />
+            <position x="-120.7" y="-12.0" z="0.5" />
+            <position x="-122.7" y="-12.0" z="0.5" />
+            <position x="-124.7" y="-12.0" z="0.5" />
+            <position x="-126.7" y="-12.0" z="0.5" />
+            <position x="-128.7" y="-12.0" z="0.5" />
+            <position x="-130.7" y="-12.0" z="0.5" />
+            <position x="-132.7" y="-12.0" z="0.5" />
+            <position x="-134.7" y="-12.0" z="0.5" />
+            <position x="-136.7" y="-12.0" z="0.5" />
+            <position x="-138.7" y="-12.0" z="0.5" />
+            <position x="-140.7" y="-12.0" z="0.5" />
+            <position x="-142.7" y="-12.0" z="0.5" />
+            <position x="-144.7" y="-12.0" z="0.5" />
+            <position x="-146.7" y="-12.0" z="0.5" />
+            <position x="-148.7" y="-12.0" z="0.5" />
+            <position x="-150.7" y="-12.0" z="0.5" />
+            <position x="-152.7" y="-12.0" z="0.5" />
+
+        </waypoints>
+        <scenarios>
+            <scenario name="BrokenDownVehicle_S20_DS" type="BrokenDownVehicle" town="Town06">
+                <trigger_point x="-62.7" y="-12.0" z="0.5" yaw="-180.0"/>
+                <init_speed value="20.0" />
+                <other_actor x="-65.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.tesla.model3" />
+                <other_actor x="-52.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.audi.tt" />
+                <other_actor x="-73.7" y="-15.5" z="0.5" yaw="-180.0" model="vehicle.bmw.grandtourer" />
+                <other_actor x="-122.7" y="-12.0" z="0" yaw="-180.0" model="static.prop.constructioncone" />
+                <other_actor x="-132.7" y="-12.0" z="0.5" yaw="-180.0" model="vehicle.volkswagen.t2" />
+            </scenario>
+        </scenarios>
+        <weathers>
+            <weather cloudiness="10.0" fog_density="0.0" precipitation="0.0" sun_altitude_angle="45.0" />
+        </weathers>
+    </route>
+
+
 
     <!-- ========== scenario_class 9:Slanted motor and children ========== -->
 
