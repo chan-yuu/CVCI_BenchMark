@@ -97,7 +97,7 @@ def extract_private_facts_high_speed_accident(criteria_list):
             facts["resume_route"] = (criterion.test_status == "SUCCESS")
     return facts
 # Trucks encountered during construction_private_facats extracts
-    def extract_private_facts_lane_closure(criteria_list):
+def extract_private_facts_lane_closure(criteria_list):
     """提取车道封闭场景的私有事实"""
     facts = {
         "deceleration_detected": False, 
