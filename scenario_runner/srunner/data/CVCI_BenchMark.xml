@@ -1240,7 +1240,7 @@
         </weathers>
     </route>
     
-    <route id="9" town="Town06">
+    <route id="10" town="Town06">
         <!-- 移除所有天气配置，主车waypoint Y=46.1 -->
         <waypoints>
             <position x="180.2" y="45.1" z="0.0"/>
@@ -1364,7 +1364,7 @@
         </weathers>
     </route>
     
-    <route id="10" town="Town06">
+    <route id="11" town="Town06">
         <!-- 移除所有天气配置，主车waypoint Y=46.1 -->
         <waypoints>
             <position x="180.2" y="45.1" z="0.0"/>
