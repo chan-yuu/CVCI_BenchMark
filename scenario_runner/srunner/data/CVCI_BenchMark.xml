@@ -7975,7 +7975,11 @@
         </waypoints>
         <scenarios>
             <scenario name="EbikeAndPedestrianCross" type="EbikeAndPedestrianCross">
+<<<<<<< HEAD
                 <trigger_point x="-25.0" y="-65.01" z="0.5" yaw="180.0" />
+=======
+                <trigger_point x="-15.0" y="-65.01" z="0.5" yaw="180.0"/>
+>>>>>>> dev
                 <init_speed value="30.0" />
                 <difficulty value="level2" />
                 <other_actor x="-35.96" y="-52.51" z="0.5" yaw="217.2" model="vehicle.bh.crossbike" />
@@ -8017,7 +8021,11 @@
         </waypoints>
         <scenarios>
             <scenario name="EbikeAndPedestrianCross" type="EbikeAndPedestrianCross">
+<<<<<<< HEAD
                 <trigger_point x="-25.0" y="-65.01" z="0.5" yaw="180.0" />
+=======
+                <trigger_point x="-15.0" y="-65.01" z="0.5" yaw="180.0"/>
+>>>>>>> dev
                 <init_speed value="30.0" />
                 <difficulty value="level2" />
                 <other_actor x="-35.96" y="-52.51" z="0.5" yaw="217.2" model="vehicle.bh.crossbike" />
@@ -8059,7 +8067,11 @@
         </waypoints>
         <scenarios>
             <scenario name="EbikeAndPedestrianCross" type="EbikeAndPedestrianCross">
+<<<<<<< HEAD
                 <trigger_point x="-25.0" y="-65.01" z="0.5" yaw="180.0" />
+=======
+                <trigger_point x="-15.0" y="-65.01" z="0.5" yaw="180.0"/>
+>>>>>>> dev
                 <init_speed value="30.0" />
                 <difficulty value="level2" />
                 <other_actor x="-35.96" y="-52.51" z="0.5" yaw="217.2" model="vehicle.bh.crossbike" />
@@ -8101,7 +8113,11 @@
         </waypoints>
         <scenarios>
             <scenario name="EbikeAndPedestrianCross" type="EbikeAndPedestrianCross">
+<<<<<<< HEAD
                 <trigger_point x="-25.0" y="-65.01" z="0.5" yaw="180.0" />
+=======
+                <trigger_point x="-15.0" y="-65.01" z="0.5" yaw="180.0"/>
+>>>>>>> dev
                 <init_speed value="30.0" />
                 <difficulty value="level2" />
                 <other_actor x="-35.96" y="-52.51" z="0.5" yaw="217.2" model="vehicle.bh.crossbike" />
@@ -8143,7 +8159,11 @@
         </waypoints>
         <scenarios>
             <scenario name="EbikeAndPedestrianCross" type="EbikeAndPedestrianCross">
+<<<<<<< HEAD
                 <trigger_point x="-25.0" y="-65.01" z="0.5" yaw="180.0" />
+=======
+                <trigger_point x="-5.0" y="-65.01" z="0.5" yaw="180.0"/>
+>>>>>>> dev
                 <init_speed value="40.0" />
                 <difficulty value="level3" />
                 <other_actor x="-35.96" y="-52.51" z="0.5" yaw="217.2" model="vehicle.bh.crossbike" />
@@ -8185,7 +8205,7 @@
         </waypoints>
         <scenarios>
             <scenario name="EbikeAndPedestrianCross" type="EbikeAndPedestrianCross">
-                <trigger_point x="-25.0" y="-65.01" z="0.5" yaw="180.0" />
+                <trigger_point x="-5.0" y="-65.01" z="0.5" yaw="180.0"/>
                 <init_speed value="40.0" />
                 <difficulty value="level3" />
                 <other_actor x="-35.96" y="-52.51" z="0.5" yaw="217.2" model="vehicle.bh.crossbike" />
@@ -8227,7 +8247,7 @@
         </waypoints>
         <scenarios>
             <scenario name="EbikeAndPedestrianCross" type="EbikeAndPedestrianCross">
-                <trigger_point x="-25.0" y="-65.01" z="0.5" yaw="180.0" />
+                <trigger_point x="-5.0" y="-65.01" z="0.5" yaw="180.0"/>
                 <init_speed value="40.0" />
                 <difficulty value="level3" />
                 <other_actor x="-35.96" y="-52.51" z="0.5" yaw="217.2" model="vehicle.bh.crossbike" />
@@ -8269,7 +8289,7 @@
         </waypoints>
         <scenarios>
             <scenario name="EbikeAndPedestrianCross" type="EbikeAndPedestrianCross">
-                <trigger_point x="-25.0" y="-65.01" z="0.5" yaw="180.0" />
+                <trigger_point x="-5.0" y="-65.01" z="0.5" yaw="180.0"/>
                 <init_speed value="40.0" />
                 <difficulty value="level3" />
                 <other_actor x="-35.96" y="-52.51" z="0.5" yaw="217.2" model="vehicle.bh.crossbike" />
