@@ -1,5 +1,5 @@
-<?xml version='1.0' encoding='utf-8'?>
 <routes>
+    <!-- ========== scenario_class 1:missing car ========== -->
     <route id="0" town="Town06">
         <waypoints>
             <position x="180.2" y="45.1" z="0.0" />
@@ -1416,6 +1416,8 @@
             <weather cloudiness="90.0" fog_density="10.0" precipitation="60" precipitation_deposits="50" wetness="70" wind_intensity="80.0" sun_altitude_angle="90" sun_azimuth_angle="0" route_percentage="100" />
         </weathers>
     </route>
+
+    <!-- ========== scenario_class 2:High speed temporary construction ========== -->
     <route id="0" town="Town04">
         <waypoints>
             <position x="100.22" y="244.91" z="0.0" />
@@ -3144,6 +3146,11 @@
             <weather cloudiness="90.0" fog_density="10.0" precipitation="60" precipitation_deposits="50" wetness="70" wind_intensity="80.0" sun_altitude_angle="90" sun_azimuth_angle="0" route_percentage="100" />
         </weathers>
     </route>
+
+   <!-- ========== scenario_class 3:High-speed reckless lane cutting ========== -->
+   
+
+   <!-- ========== scenario_class 4:Highway accident vehicle ========== -->
     <route id="0" town="Town04">
         <weathers>
             <weather route_percentage="0" cloudiness="90.0" precipitation="60.0" precipitation_deposits="50.0" wetness="70.0" wind_intensity="80.0" sun_azimuth_angle="-1.0" sun_altitude_angle="0.5" fog_density="10.0" />
@@ -3348,6 +3355,8 @@
             </scenario>
         </scenarios>
     </route>
+
+    <!-- ========== scenario_class 5:Trucks encountered during construction ========== -->
     <route id="0" town="Town04">
         <weathers>
             <weather cloudiness="90.0" fog_density="10.0" precipitation="60.0" precipitation_deposits="50.0" wetness="70.0" wind_intensity="80.0" sun_altitude_angle="0.5" sun_azimuth_angle="-1.0" route_percentage="100" />
@@ -5196,6 +5205,8 @@
             </scenario>
         </scenarios>
     </route>
+
+    <!-- ========== scenario_class 6:Drive into the roundabout ========== -->
     <route id="0" town="Town03">
         <waypoints>
             <position x="5.0" y="50.0" z="0.0" />
@@ -6108,6 +6119,8 @@
             <weather cloudiness="90.0" fog_density="10.0" precipitation="60" precipitation_deposits="50" wetness="70" wind_intensity="80.0" sun_altitude_angle="90" sun_azimuth_angle="0" route_percentage="100" />
         </weathers>
     </route>
+
+    <!-- ========== scenario_class 7:Four students crossing the road ========== -->
     <route id="0" town="Town05">
         <weathers>
             <weather route_percentage="100" cloudiness="90.0" precipitation="60.0" precipitation_deposits="50.0" wetness="70.0" wind_intensity="80.0" sun_azimuth_angle="-1.0" sun_altitude_angle="0.5" fog_density="10.0" />
@@ -7008,6 +7021,8 @@
             </scenario>
         </scenarios>
     </route>
+
+    <!-- ========== scenario_class 8:avoid a disabled vehicle ========== -->
     <route id="8" town="Town06">
         <waypoints>
             <position x="-62.7" y="-12.0" z="0.5" />
@@ -7776,6 +7791,8 @@
             <weather cloudiness="90.0" fog_density="10.0" precipitation="60" precipitation_deposits="50" wetness="70" wind_intensity="80.0" sun_altitude_angle="90" sun_azimuth_angle="0" route_percentage="100" />
         </weathers>
     </route>
+
+    <!-- ========== scenario_class 9:Slanted motor and children ========== -->
     <route id="1" town="Town10HD_Opt" initial_speed="20.0">
         <waypoints>
             <position x="-0.0" y="-65.01" z="0.5" />
@@ -8280,6 +8297,8 @@
             <weather cloudiness="90.0" fog_density="10.0" precipitation="60.0" precipitation_deposits="50.0" wetness="70.0" wind_intensity="80.0" sun_altitude_angle="0.5" sun_azimuth_angle="-1.0" route_percentage="100" />
         </weathers>
     </route>
+
+    <!-- ========== scenario_class 10:reverse vehicle========== -->
     <route id="0" town="Town03">
         <waypoints>
             <position x="15.500000" y="134.423233" z="0.5" />
