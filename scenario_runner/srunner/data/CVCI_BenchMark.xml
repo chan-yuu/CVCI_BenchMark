@@ -5263,11 +5263,12 @@
         </waypoints>
         <scenarios>
             <scenario name="RoundaboutMergeConflict_1" type="RoundaboutMergeConflict">
-                <trigger_point x="5" y="45" z="0.0" yaw="270.0" />
+                <trigger_point x="4.84" y="43" z="0.0" yaw="270.0" />
                 <init_speed value="8.33" />
                 <distance value="5" />
-                <adversary_speed value="5.0" />
-                <adversary_throttle value="0.45" />
+                <adversary_speed value="6.0" />
+                <adversary_intitial_speed value="1" />
+                <other_actor x="-2.19" y="23.2" z="0.5" yaw="0" pitch="0"  roll="0" model="vehicle.lincoln.mkz_2017" />
                 <adversary_waypoints>
                     <position x="-7.9" y="22.7" z="0.0" />
                     <position x="-4.3" y="23.5" z="0.0" />
@@ -5339,11 +5340,12 @@
         </waypoints>
         <scenarios>
             <scenario name="RoundaboutMergeConflict_1" type="RoundaboutMergeConflict">
-                <trigger_point x="5" y="45" z="0.0" yaw="270.0" />
+                <trigger_point x="4.84" y="43" z="0.0" yaw="270.0" />
                 <init_speed value="11.11" />
                 <distance value="5" />
-                <adversary_speed value="5.0" />
-                <adversary_throttle value="0.45" />
+                <adversary_speed value="6.0" />
+                <adversary_intitial_speed value="2" />
+                <other_actor x="-2.19" y="23.2" z="0.5" yaw="0" pitch="0"  roll="0" model="vehicle.lincoln.mkz_2017" />
                 <adversary_waypoints>
                     <position x="-7.9" y="22.7" z="0.0" />
                     <position x="-4.3" y="23.5" z="0.0" />
@@ -5415,11 +5417,12 @@
         </waypoints>
         <scenarios>
             <scenario name="RoundaboutMergeConflict_1" type="RoundaboutMergeConflict">
-                <trigger_point x="5" y="45" z="0.0" yaw="270.0" />
+                <trigger_point x="4.84" y="43" z="0.0" yaw="270.0" />
                 <init_speed value="13.89" />
                 <distance value="5" />
-                <adversary_speed value="5.0" />
-                <adversary_throttle value="0.45" />
+                <adversary_speed value="9.0" />
+                <adversary_intitial_speed value="3" />
+                <other_actor x="-2.19" y="23.2" z="0.5" yaw="0" pitch="0"  roll="0" model="vehicle.lincoln.mkz_2017" />
                 <adversary_waypoints>
                     <position x="-7.9" y="22.7" z="0.0" />
                     <position x="-4.3" y="23.5" z="0.0" />
@@ -5491,11 +5494,12 @@
         </waypoints>
         <scenarios>
             <scenario name="RoundaboutMergeConflict_1" type="RoundaboutMergeConflict">
-                <trigger_point x="5" y="45" z="0.0" yaw="270.0" />
+                <trigger_point x="4.84" y="43" z="0.0" yaw="270.0" />
                 <init_speed value="8.33" />
                 <distance value="5" />
-                <adversary_speed value="5.0" />
-                <adversary_throttle value="0.45" />
+                <adversary_speed value="6.0" />
+                <adversary_intitial_speed value="1" />
+                <other_actor x="-2.19" y="23.2" z="0.5" yaw="0" pitch="0"  roll="0" model="vehicle.lincoln.mkz_2017" />
                 <adversary_waypoints>
                     <position x="-7.9" y="22.7" z="0.0" />
                     <position x="-4.3" y="23.5" z="0.0" />
@@ -5506,7 +5510,6 @@
                     <position x="11.6" y="20.6" z="0.0" />
                 </adversary_waypoints>
             </scenario>
-        </scenarios>
         <weathers>
             <weather cloudiness="90.0" fog_density="10.0" precipitation="0" precipitation_deposits="0" wetness="0" wind_intensity="80.0" sun_altitude_angle="0.5" sun_azimuth_angle="-1.0" route_percentage="100" />
         </weathers>
@@ -5567,11 +5570,12 @@
         </waypoints>
         <scenarios>
             <scenario name="RoundaboutMergeConflict_1" type="RoundaboutMergeConflict">
-                <trigger_point x="5" y="45" z="0.0" yaw="270.0" />
+                <trigger_point x="4.84" y="43" z="0.0" yaw="270.0" />
                 <init_speed value="11.11" />
                 <distance value="5" />
-                <adversary_speed value="5.0" />
-                <adversary_throttle value="0.45" />
+                <adversary_speed value="6.0" />
+                <adversary_intitial_speed value="2" />
+                <other_actor x="-2.19" y="23.2" z="0.5" yaw="0" pitch="0"  roll="0" model="vehicle.lincoln.mkz_2017" />
                 <adversary_waypoints>
                     <position x="-7.9" y="22.7" z="0.0" />
                     <position x="-4.3" y="23.5" z="0.0" />
@@ -5643,11 +5647,12 @@
         </waypoints>
         <scenarios>
             <scenario name="RoundaboutMergeConflict_1" type="RoundaboutMergeConflict">
-                <trigger_point x="5" y="45" z="0.0" yaw="270.0" />
+                <trigger_point x="4.84" y="43" z="0.0" yaw="270.0" />
                 <init_speed value="13.89" />
                 <distance value="5" />
-                <adversary_speed value="5.0" />
-                <adversary_throttle value="0.45" />
+                <adversary_speed value="9.0" />
+                <adversary_intitial_speed value="3" />
+                <other_actor x="-2.19" y="23.2" z="0.5" yaw="0" pitch="0"  roll="0" model="vehicle.lincoln.mkz_2017" />
                 <adversary_waypoints>
                     <position x="-7.9" y="22.7" z="0.0" />
                     <position x="-4.3" y="23.5" z="0.0" />
@@ -5719,11 +5724,12 @@
         </waypoints>
         <scenarios>
             <scenario name="RoundaboutMergeConflict_1" type="RoundaboutMergeConflict">
-                <trigger_point x="5" y="45" z="0.0" yaw="270.0" />
+                <trigger_point x="4.84" y="43" z="0.0" yaw="270.0" />
                 <init_speed value="8.33" />
                 <distance value="5" />
-                <adversary_speed value="5.0" />
-                <adversary_throttle value="0.45" />
+                <adversary_speed value="6.0" />
+                <adversary_intitial_speed value="1" />
+                <other_actor x="-2.19" y="23.2" z="0.5" yaw="0" pitch="0"  roll="0" model="vehicle.lincoln.mkz_2017" />
                 <adversary_waypoints>
                     <position x="-7.9" y="22.7" z="0.0" />
                     <position x="-4.3" y="23.5" z="0.0" />
@@ -5734,7 +5740,6 @@
                     <position x="11.6" y="20.6" z="0.0" />
                 </adversary_waypoints>
             </scenario>
-        </scenarios>
         <weathers>
             <weather cloudiness="90.0" fog_density="10.0" precipitation="0" precipitation_deposits="0" wetness="0" wind_intensity="80.0" sun_altitude_angle="90" sun_azimuth_angle="0" route_percentage="100" />
         </weathers>
@@ -5795,11 +5800,12 @@
         </waypoints>
         <scenarios>
             <scenario name="RoundaboutMergeConflict_1" type="RoundaboutMergeConflict">
-                <trigger_point x="5" y="45" z="0.0" yaw="270.0" />
+                <trigger_point x="4.84" y="43" z="0.0" yaw="270.0" />
                 <init_speed value="11.11" />
                 <distance value="5" />
-                <adversary_speed value="5.0" />
-                <adversary_throttle value="0.45" />
+                <adversary_speed value="6.0" />
+                <adversary_intitial_speed value="2" />
+                <other_actor x="-2.19" y="23.2" z="0.5" yaw="0" pitch="0"  roll="0" model="vehicle.lincoln.mkz_2017" />
                 <adversary_waypoints>
                     <position x="-7.9" y="22.7" z="0.0" />
                     <position x="-4.3" y="23.5" z="0.0" />
@@ -5871,11 +5877,12 @@
         </waypoints>
         <scenarios>
             <scenario name="RoundaboutMergeConflict_1" type="RoundaboutMergeConflict">
-                <trigger_point x="5" y="45" z="0.0" yaw="270.0" />
+                <trigger_point x="4.84" y="43" z="0.0" yaw="270.0" />
                 <init_speed value="13.89" />
                 <distance value="5" />
-                <adversary_speed value="5.0" />
-                <adversary_throttle value="0.45" />
+                <adversary_speed value="9.0" />
+                <adversary_intitial_speed value="3" />
+                <other_actor x="-2.19" y="23.2" z="0.5" yaw="0" pitch="0"  roll="0" model="vehicle.lincoln.mkz_2017" />
                 <adversary_waypoints>
                     <position x="-7.9" y="22.7" z="0.0" />
                     <position x="-4.3" y="23.5" z="0.0" />
@@ -5947,11 +5954,12 @@
         </waypoints>
         <scenarios>
             <scenario name="RoundaboutMergeConflict_1" type="RoundaboutMergeConflict">
-                <trigger_point x="5" y="45" z="0.0" yaw="270.0" />
+                <trigger_point x="4.84" y="43" z="0.0" yaw="270.0" />
                 <init_speed value="8.33" />
                 <distance value="5" />
-                <adversary_speed value="5.0" />
-                <adversary_throttle value="0.45" />
+                <adversary_speed value="6.0" />
+                <adversary_intitial_speed value="1" />
+                <other_actor x="-2.19" y="23.2" z="0.5" yaw="0" pitch="0"  roll="0" model="vehicle.lincoln.mkz_2017" />
                 <adversary_waypoints>
                     <position x="-7.9" y="22.7" z="0.0" />
                     <position x="-4.3" y="23.5" z="0.0" />
@@ -6023,11 +6031,12 @@
         </waypoints>
         <scenarios>
             <scenario name="RoundaboutMergeConflict_1" type="RoundaboutMergeConflict">
-                <trigger_point x="5" y="45" z="0.0" yaw="270.0" />
+                <trigger_point x="4.84" y="43" z="0.0" yaw="270.0" />
                 <init_speed value="11.11" />
                 <distance value="5" />
-                <adversary_speed value="5.0" />
-                <adversary_throttle value="0.45" />
+                <adversary_speed value="6.0" />
+                <adversary_intitial_speed value="2" />
+                <other_actor x="-2.19" y="23.2" z="0.5" yaw="0" pitch="0"  roll="0" model="vehicle.lincoln.mkz_2017" />
                 <adversary_waypoints>
                     <position x="-7.9" y="22.7" z="0.0" />
                     <position x="-4.3" y="23.5" z="0.0" />
@@ -6099,11 +6108,12 @@
         </waypoints>
         <scenarios>
             <scenario name="RoundaboutMergeConflict_1" type="RoundaboutMergeConflict">
-                <trigger_point x="5" y="45" z="0.0" yaw="270.0" />
+                <trigger_point x="4.84" y="43" z="0.0" yaw="270.0" />
                 <init_speed value="13.89" />
                 <distance value="5" />
-                <adversary_speed value="5.0" />
-                <adversary_throttle value="0.45" />
+                <adversary_speed value="9.0" />
+                <adversary_intitial_speed value="3" />
+                <other_actor x="-2.19" y="23.2" z="0.5" yaw="0" pitch="0"  roll="0" model="vehicle.lincoln.mkz_2017" />
                 <adversary_waypoints>
                     <position x="-7.9" y="22.7" z="0.0" />
                     <position x="-4.3" y="23.5" z="0.0" />
