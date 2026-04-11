@@ -79,6 +79,23 @@ def extract_private_facts_static_barrier(criteria_list):
     return facts
 
 # High-speed reckless lane cutting_private_facats extracts
+def extract_private_facts_high_speed_cutting(criteria_list):
+    """提取高速切入场景的私有事实"""
+    facts = {
+        'brake_response': False,
+        'safe_bypass': False,
+        'resume_route': False,
+    }
+
+    for criterion in criteria_list:
+        if criterion.name == 'CutInBrakeResponseCriterion':
+            facts['brake_response'] = _is_success(criterion)
+        elif criterion.name == 'CutInSafeBypassCriterion':
+            facts['safe_bypass'] = _is_success(criterion)
+        elif criterion.name == 'CutInResumeCriterion':
+            facts['resume_route'] = _is_success(criterion)
+
+    return facts
 
 # Highway accident vehicle_private_facats extracts
 def extract_private_facts_high_speed_accident(criteria_list):
