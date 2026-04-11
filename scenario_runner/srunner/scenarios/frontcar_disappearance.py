@@ -79,11 +79,11 @@ class CarDisappearDiagonalAccident(BasicScenario):
         self.background_vehicle_speed = self.ego_initial_speed
 
         # phase1 触发：当前车距离障碍车足够近时，前车开始右变道
-        self.phase1_trigger_distance = self._get_config_value(config, "trigger_distance", 40.0)
+        self.phase1_trigger_distance = self._get_config_value(config, "trigger_distance", 50.0)
 
         # phase2 右变道参数
         self._distance_same_lane = 5.0   # 变道前还要前行多远
-        self._distance_other_lane = 25.0 # 进入新车道行驶的距离
+        self._distance_other_lane = 20.0 # 进入新车道行驶的距离
         self._distance_lane_change = 20.0 # 变道过程的纵向距离
 
         # phase3 变道后继续前进的距离
