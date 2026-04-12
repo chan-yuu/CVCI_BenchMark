@@ -9955,7 +9955,7 @@
             <weather cloudiness="90.0" fog_density="10.0" precipitation="60" precipitation_deposits="50" wetness="70" wind_intensity="80.0" sun_altitude_angle="90" sun_azimuth_angle="0" route_percentage="100" />
         </weathers>
     </route>
-    <!-- level-3 -->
+    <!-- level-2 -->
     <route id="4" town="Town03">
         <waypoints>
             <position x="15.500000" y="134.423233" z="0.5" />
@@ -10216,7 +10216,7 @@
             <weather cloudiness="90.0" fog_density="10.0" precipitation="60" precipitation_deposits="50" wetness="70" wind_intensity="80.0" sun_altitude_angle="90" sun_azimuth_angle="0" route_percentage="100" />
         </weathers>
     </route>
-    <!-- level-3 -->
+    <!-- level-1 -->
     <route id="8" town="Town03">
         <waypoints>
             <position x="15.500000" y="134.423233" z="0.5" />
@@ -10479,6 +10479,7 @@
     </route>
 
     <!-- ========== scenario_class 11:crazy motor ========== -->
+    <!-- level-1 -->
     <route id="0" town="Town05">
         <weathers>
             <weather route_percentage="0" cloudiness="90.0" precipitation="60.0" precipitation_deposits="50.0" wetness="70.0" wind_intensity="80.0" sun_azimuth_angle="-1.0" sun_altitude_angle="0.5" fog_density="10.0" />
@@ -10839,6 +10840,7 @@
             </scenario>
         </scenarios>
     </route>
+    <!-- level-2 -->
     <route id="4" town="Town05">
         <weathers>
             <weather route_percentage="0" cloudiness="90.0" precipitation="60.0" precipitation_deposits="50.0" wetness="70.0" wind_intensity="80.0" sun_azimuth_angle="-1.0" sun_altitude_angle="0.5" fog_density="10.0" />
@@ -11199,6 +11201,7 @@
             </scenario>
         </scenarios>
     </route>
+    <!-- level-3 -->
     <route id="8" town="Town05">
         <weathers>
             <weather route_percentage="0" cloudiness="90.0" precipitation="60.0" precipitation_deposits="50.0" wetness="70.0" wind_intensity="80.0" sun_azimuth_angle="-1.0" sun_altitude_angle="0.5" fog_density="10.0" />
