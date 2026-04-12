@@ -4831,6 +4831,7 @@ class CrazyBikeNoCollisionCriterion(Criterion):
             return py_trees.common.Status.SUCCESS
 
         return new_status
+
 class CrazyBikeDecelerateCriterion(Criterion):
     """Check whether ego starts deceleration before getting too close to the cutting-in bike."""
 
@@ -4874,6 +4875,7 @@ class CrazyBikeDecelerateCriterion(Criterion):
 
         # 始终返回 RUNNING，确保它能一直 Tick 到底，直到 Parallel 节点整体结束
         return py_trees.common.Status.RUNNING
+
 class CrazyBikeResumeCriterion(Criterion):
     """Check whether ego safely resumes cruising after passing the bike."""
 
