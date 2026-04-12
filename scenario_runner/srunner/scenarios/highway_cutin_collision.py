@@ -3,7 +3,9 @@ import math
 import py_trees
 import carla
 
-from agents.tools.misc import get_speed
+def get_speed(actor):
+    vel = actor.get_velocity()
+    return math.sqrt(vel.x ** 2 + vel.y ** 2 + vel.z ** 2)
 
 from srunner.scenarios.basic_scenario import BasicScenario
 from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
@@ -551,4 +553,4 @@ class CutInCollision(BasicScenario):
         """
         Remove all actors upon deletion
         """
-        self.remove_all_actors(
+        self.remove_all_actors()
