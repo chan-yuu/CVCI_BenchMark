@@ -10,7 +10,8 @@ from srunner.scenariomanager.scenarioatomics.atomic_criteria import (
     CollisionTest,
     BarrierSlowDownCriterion,
     BarrierDetourCriterion,
-    BarrierReachGoalCriterion
+    BarrierReachGoalCriterion,
+    MinTTCAutoCriterion
 )
 
 class PassiveEgoSpeedHold(py_trees.behaviour.Behaviour):
@@ -404,7 +405,13 @@ class StaticBarrier(BasicScenario):
         criteria.append(BarrierReachGoalCriterion(
             ego, goal_location=goal_loc, distance_threshold=5.0
         ))
-
+        criteria.append(
+            MinTTCAutoCriterion(actor=self.ego_vehicles[0],
+                                other_actors=self.other_actors,
+                                distance_threshold=40.0,
+                                forward_angle_deg=140.0,
+                                terminate_on_failure=False)
+        )
         return criteria
 
     def __del__(self):

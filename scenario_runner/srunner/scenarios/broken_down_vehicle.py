@@ -8,7 +8,7 @@ from srunner.scenarios.basic_scenario import BasicScenario
 from srunner.scenariomanager.scenarioatomics.atomic_behaviors import AtomicBehavior
 from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import InTriggerDistanceToLocation
 from srunner.scenariomanager.scenarioatomics.atomic_criteria import (Criterion, 
-    BrokenDownVehicleBrakeCriterion, BrokenDownVehicleBypassCriterion, BrokenDownVehicleResumeCriterion)
+    BrokenDownVehicleBrakeCriterion, BrokenDownVehicleBypassCriterion, BrokenDownVehicleResumeCriterion,MinTTCAutoCriterion)
 
 
 
@@ -131,4 +131,7 @@ class BrokenDownVehicle(BasicScenario):
         if hazard:
             criteria.append(BrokenDownVehicleBypassCriterion(ego, hazard))
         criteria.append(BrokenDownVehicleResumeCriterion(ego, self.goal_location))
+        criteria.append(
+            MinTTCAutoCriterion(actor=self.ego_vehicles[0],other_actors=self.other_actors,distance_threshold=40.0,forward_angle_deg=140.0,terminate_on_failure=False)
+        )
         return criteria

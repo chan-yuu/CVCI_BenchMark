@@ -6,7 +6,7 @@ from srunner.scenariomanager.scenarioatomics.atomic_criteria import (
     CollisionTest,
     DecelerationForConstructionTest,
     RoutePassCompletionTest,
-    MinTTCTest
+    MinTTCAutoCriterion
 )
 from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import DriveDistance
 from srunner.scenarios.basic_scenario import BasicScenario
@@ -100,7 +100,11 @@ class LaneClosureWithTruck(BasicScenario):
     def _create_test_criteria(self):
         criteria = [
             CollisionTest(self.ego_vehicles[0], other_actor_type="miscellaneous", terminate_on_failure=False, name="CollisionTestStatic"),
-            MinTTCTest(self.ego_vehicles[0], target_actors=self.other_actors, name="MinTTCTest"),
+            MinTTCAutoCriterion(actor=self.ego_vehicles[0],
+                                other_actors=self.other_actors,
+                                distance_threshold=40.0,
+                                forward_angle_deg=140.0,
+                                terminate_on_failure=False),
             DecelerationForConstructionTest(
                 self.ego_vehicles[0],
                 start_distance=self._cone_start_dist,

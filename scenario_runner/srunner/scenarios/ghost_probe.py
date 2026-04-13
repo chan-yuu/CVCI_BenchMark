@@ -206,7 +206,7 @@ class GhostProbeScenario(BasicScenario):
                 ScooterDecelerateCriterion,
                 PedestrianStopCriterion,
                 PedestrianResumeCriterion,
-            )
+                MinTTCAutoCriterion)
 
             scooter_criterion = ScooterDecelerateCriterion(
                 actor=ego,
@@ -245,6 +245,13 @@ class GhostProbeScenario(BasicScenario):
             criteria.append(resume_criterion)
 
         criteria.append(CollisionTest(ego))
+        criteria.append(
+            MinTTCAutoCriterion(actor=self.ego_vehicles[0],
+                                other_actors=self.other_actors,
+                                distance_threshold=40.0,
+                                forward_angle_deg=140.0,
+                                terminate_on_failure=False)
+        )
         return criteria
 
     def __del__(self):

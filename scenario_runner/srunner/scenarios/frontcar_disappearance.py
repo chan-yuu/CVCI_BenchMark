@@ -14,7 +14,8 @@ from srunner.scenariomanager.scenarioatomics.atomic_behaviors import (
 from srunner.scenariomanager.scenarioatomics.atomic_criteria import (
     StaticObstacleBrakeSlowDownCriterion,
     StaticObstacleSafePassCriterion,
-    ReachEndPointCriterion
+    ReachEndPointCriterion,
+    MinTTCAutoCriterion
 )
 
 
@@ -312,6 +313,14 @@ class CarDisappearDiagonalAccident(BasicScenario):
                 end_z=0.0,
                 distance_threshold=5.0
             )
+        )
+        criteria.append(
+            MinTTCAutoCriterion(
+                actor=self.ego_vehicles[0],
+                other_actors=self.other_actors,
+                distance_threshold=40.0,
+                forward_angle_deg=140.0,
+                terminate_on_failure=False)
         )
 
         return criteria

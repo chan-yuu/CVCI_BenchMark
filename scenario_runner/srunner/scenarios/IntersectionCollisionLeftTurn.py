@@ -8,7 +8,9 @@ from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
 from srunner.scenariomanager.scenarioatomics.atomic_behaviors import WaypointFollower
 from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import InTriggerDistanceToLocation, DriveDistance
 from srunner.scenariomanager.scenarioatomics.atomic_criteria import CollisionTest
-from srunner.scenariomanager.scenarioatomics.atomic_criteria import (IntersectionCollisionLeftTurnBrakeCriterion, IntersectionCollisionLeftTurnResumeCriterion)
+from srunner.scenariomanager.scenarioatomics.atomic_criteria import (IntersectionCollisionLeftTurnBrakeCriterion, 
+                                                                     IntersectionCollisionLeftTurnResumeCriterion,
+                                                                     MinTTCAutoCriterion)
 
 
 class EgoSpeedControl(py_trees.behaviour.Behaviour):
@@ -287,6 +289,14 @@ class IntersectionCollisionLeftTurn(BasicScenario):
                 center_recover_threshold=2.0,
                 min_resume_speed=1.0
             )
+        )
+        criteria.append(
+            MinTTCAutoCriterion(
+                actor=self.ego_vehicles[0],
+                other_actors=self.other_actors,
+                distance_threshold=40.0,
+                forward_angle_deg=140.0,
+                terminate_on_failure=False)
         )
         return criteria
 

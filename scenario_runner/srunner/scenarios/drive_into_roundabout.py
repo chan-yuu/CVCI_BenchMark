@@ -16,6 +16,7 @@ from srunner.scenariomanager.scenarioatomics.atomic_criteria import (
     RoundaboutDecelerateCriterion,
     RoundaboutYieldConvoyCriterion,
     RoundaboutSafePassCriterion,
+    MinTTCAutoCriterion
 )
 
 
@@ -392,6 +393,13 @@ class RoundaboutMergeConflict(BasicScenario):
                 goal_dist_threshold=6.0,
                 min_resume_speed=2.0
             )
+        )
+        criteria.append(
+            MinTTCAutoCriterion(actor=self.ego_vehicles[0],
+                                other_actors=self.other_actors,
+                                distance_threshold=40.0,
+                                forward_angle_deg=140.0,
+                                terminate_on_failure=False)
         )
 
         return criteria

@@ -10,6 +10,7 @@ from srunner.scenariomanager.scenarioatomics.atomic_criteria import (
     CrazyBikeDecelerateCriterion,
     CrazyBikeNoCollisionCriterion,
     CrazyBikeResumeCriterion,
+    MinTTCAutoCriterion
 )
 from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import (
     InTriggerDistanceToVehicle,
@@ -276,6 +277,9 @@ class CrazyBikeScenario(BasicScenario):
             min_resume_duration=self._resume_min_duration,
             lane_tolerance=self._resume_lane_tolerance
         ))
+        criteria.append(
+            MinTTCAutoCriterion(actor=self.ego_vehicles[0],other_actors=self.other_actors,distance_threshold=40.0,forward_angle_deg=140.0,terminate_on_failure=False)
+        )
         return criteria
 
     def __del__(self):
