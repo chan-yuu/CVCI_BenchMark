@@ -313,7 +313,7 @@ def score_left_turn(common_facts, private_facts):
 
     if private_facts["brake_response"]:
         base_score += 70.0
-    if private_facts["resume_route"]:
+    if private_facts["safe_bypass"]:
         base_score += 30.0
 
     gate = compute_gate(common_facts)

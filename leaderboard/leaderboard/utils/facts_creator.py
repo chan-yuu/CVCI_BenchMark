@@ -262,15 +262,14 @@ def extract_private_facts_left_turn(criteria_list):
     facts = {
         "brake_response": False,
         "safe_bypass": False,
-        "resume_route": False,
     }
 
     for criterion in criteria_list:
         if criterion.name == "IntersectionCollisionLeftTurnBrakeCriterion":
-            facts["brake_response"] = (criterion.test_status == "SUCCESS")
+            facts["brake_response"] = (criterion.brake_status == "SUCCESS")
 
         elif criterion.name == "IntersectionCollisionLeftTurnResumeCriterion":
-            facts["resume_route"] = (criterion.test_status == "SUCCESS")
+            facts["safe_bypass"] = (criterion.safepass_status == "SUCCESS")
 
     return facts
 

@@ -6,7 +6,7 @@ import numpy as np
 from srunner.scenarios.basic_scenario import BasicScenario
 from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
 from srunner.scenariomanager.scenarioatomics.atomic_behaviors import WaypointFollower
-from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import InTriggerDistanceToLocation
+from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import InTriggerDistanceToLocation, DriveDistance
 from srunner.scenariomanager.scenarioatomics.atomic_criteria import CollisionTest
 from srunner.scenariomanager.scenarioatomics.atomic_criteria import (IntersectionCollisionLeftTurnBrakeCriterion, IntersectionCollisionLeftTurnResumeCriterion)
 
@@ -25,7 +25,7 @@ class EgoSpeedControl(py_trees.behaviour.Behaviour):
         target_speed=10.0,
         throttle_gain=0.20,
         brake_gain=0.10,
-        max_throttle=0.75,
+        max_throttle=1,
         max_brake=0.50,
         takeover_steer_threshold=0.02,
         takeover_throttle_threshold=0.02,
@@ -110,7 +110,11 @@ class IntersectionCollisionLeftTurn(BasicScenario):
         self._npc_speed = float(
             config.other_parameters.get("npc_speed", {}).get("value", 11.0)
         )
-
+        self._trigger_npc_point = carla.Location(
+            x=-35.0,
+            y=205.1,
+            z=2.5
+        )
         super(IntersectionCollisionLeftTurn, self).__init__(
             "IntersectionCollisionLeftTurn",
             ego_vehicles,
@@ -143,13 +147,6 @@ class IntersectionCollisionLeftTurn(BasicScenario):
         for actor_conf in config.other_actors:
             actor = CarlaDataProvider.request_new_actor(actor_conf.model, actor_conf.transform)
             if actor:
-                self.other_actors.append(actor)
-            else:
-                print(f"Warning: Failed to spawn {actor_conf.model}")
-
-        for actor_conf in config.other_actors:
-            actor = CarlaDataProvider.request_new_actor(actor_conf.model, actor_conf.transform)
-            if actor:
                 # 开启灯光（推荐：示宽灯 + 近光灯）
                 actor.set_light_state(carla.VehicleLightState(
                     carla.VehicleLightState.Position |
@@ -170,13 +167,6 @@ class IntersectionCollisionLeftTurn(BasicScenario):
         构建行为树：手动计算圆弧路径，并强制投影为合法的 Waypoint
         """
         # ————————场景调节条件——————————
-        # 初始化触发点
-        self._trigger_npc_point = carla.Location(
-            x=-35.0,
-            y=205.1,
-            z=2.5
-        )
-
         # NPC 速度
         self._npc_speed = self._npc_speed
 
@@ -270,6 +260,8 @@ class IntersectionCollisionLeftTurn(BasicScenario):
         npc_sequence.add_child(npc_move)   
 
         root.add_child(npc_sequence)
+        ego_drive_distance = DriveDistance(ego, 100)
+        root.add_child(ego_drive_distance)
         return root
 
     def _create_test_criteria(self):
@@ -283,9 +275,6 @@ class IntersectionCollisionLeftTurn(BasicScenario):
             IntersectionCollisionLeftTurnBrakeCriterion(
                 actor=self.ego_vehicles[0],
                 hazard_actor=self.other_actors[0],
-                trigger_x=5.0,
-                brake_threshold=0.5,
-                min_brake_duration=0.3
             )
         )
 

@@ -4840,77 +4840,99 @@ class CrazyBikeResumeCriterion(Criterion):
 # ==========================Blind spot hidden car criterion==========================
 class IntersectionCollisionLeftTurnBrakeCriterion(Criterion):
     """
-    识别并减速：
-    当障碍车开始侵入风险区后，ego 是否输出明确制动信号
+    检测减速行为：
+    1. 当与障碍车距离小于 trigger_distance 时激活。
+    2. 必须检测到主动刹车信号 (brake > threshold)。
+    3. 速度减小量达到目标值。
+    4. 排除掉因碰撞导致的异常降速。
     """
     def __init__(
         self,
         actor,
         hazard_actor,
         name="IntersectionCollisionLeftTurnBrakeCriterion",
-        trigger_x=5.0,
-        brake_threshold=0.5,
-        min_brake_duration=1.0,
-        max_response_time=2.5,
+        trigger_distance=40.0,
+        target_speed_reduction=3.0,   # m/s
+        brake_threshold=0.1,          # 刹车踏板阈值
+        collision_speed_drop=2.0,     # 单帧降速超过此值判定为碰撞 (m/s per tick)
         terminate_on_failure=False
     ):
         super().__init__(name, actor, terminate_on_failure=terminate_on_failure)
 
         self.hazard_actor = hazard_actor
-        self.trigger_x = trigger_x
+        self.trigger_distance = trigger_distance
+        self.target_speed_reduction = target_speed_reduction
         self.brake_threshold = brake_threshold
-        self.min_brake_duration = min_brake_duration
-        self.max_response_time = max_response_time
+        self.collision_speed_drop = collision_speed_drop
 
         self._activated = False
-        self._start_time = None
-        self._brake_start_time = None
+        self._initial_speed = None
+        self._last_speed = None
+        self._brake_detected = False
+        self._collision_occurred = False
 
         self.test_status = "INIT"
-        self.actual_value = 0
-        self.success_value = 1
+        self.brake_status = "INIT"
+        self.actual_value = 0.0
+        self.success_value = target_speed_reduction
 
     def update(self):
         new_status = py_trees.common.Status.RUNNING
 
-        if not self.actor:
+        if not self.actor or not self.hazard_actor:
             return new_status
 
-        self_loc = self.actor.get_location()
+        # 获取位置和速度
+        ego_loc = self.actor.get_location()
+        hazard_loc = self.hazard_actor.get_location()
+        current_distance = ego_loc.distance(hazard_loc)
+        
+        vel = self.actor.get_velocity()
+        current_speed = math.sqrt(vel.x**2 + vel.y**2 + vel.z**2)
 
-        # 障碍车进入主车道/风险区后开始检测
-        if not self._activated and self_loc.x >= self.trigger_x:
+        # 1. 触发逻辑
+        if not self._activated and current_distance <= self.trigger_distance:
             self._activated = True
-            self._start_time = GameTime.get_time()
+            self._initial_speed = current_speed
+            self._last_speed = current_speed
+            print(f"[{self.name}] 激活：初始速度 {current_speed:.2f} m/s", flush=True)
 
         if not self._activated:
             return new_status
 
+        # 2. 实时监测刹车信号和碰撞风险
         control = self.actor.get_control()
-        current_time = GameTime.get_time()
+        
+        # 记录是否踩过刹车
+        if control.brake > self.brake_threshold:
+            self._brake_detected = True
 
-        # brake 达到阈值，开始累计持续时间
-        if control.brake >= self.brake_threshold:
-            if self._brake_start_time is None:
-                self._brake_start_time = current_time
+        # 检测异常降速（单帧降速过快通常是碰撞）
+        if self._last_speed is not None:
+            speed_delta = self._last_speed - current_speed
+            if speed_delta > self.collision_speed_drop:
+                self._collision_occurred = True
+                print(f"[{self.name}] 警告：检测到疑似碰撞（瞬时降速 {speed_delta:.2f} m/s）", flush=True)
 
-            brake_duration = current_time - self._brake_start_time
-            if brake_duration >= self.min_brake_duration:
+        # 3. 判定逻辑
+        speed_reduction = self._initial_speed - current_speed
+        self.actual_value = round(speed_reduction, 2)
+
+        # 成功条件：降速足够 + 有刹车动作 + 无碰撞
+        if speed_reduction >= self.target_speed_reduction:
+            if self._brake_detected and not self._collision_occurred:
+                print(f"[{self.name}] 成功：主动减速 {speed_reduction:.2f} m/s", flush=True)
                 self.test_status = "SUCCESS"
-                self.actual_value = 1
+                self.brake_status = "SUCCESS"
                 return py_trees.common.Status.SUCCESS
-        else:
-            # brake 中断则重新计时
-            self._brake_start_time = None
 
-        # 响应超时还没踩刹车，则失败
-        if current_time - self._start_time > self.max_response_time:
-            self.test_status = "FAILURE"
-            self.actual_value = 0
-            return py_trees.common.Status.FAILURE
-
+        self._last_speed = current_speed
         return new_status
 
+    def terminate(self, new_status):
+        if self.test_status != "SUCCESS":
+            self.test_status = "FAILURE"
+        super().terminate(new_status)
 class IntersectionCollisionLeftTurnResumeCriterion(Criterion):
     """
     离开风险区并恢复通行：
@@ -4935,6 +4957,7 @@ class IntersectionCollisionLeftTurnResumeCriterion(Criterion):
         self.min_resume_speed = min_resume_speed
 
         self.test_status = "INIT"
+        self.safepass_status = "INIT"
 
     def update(self):
         new_status = py_trees.common.Status.RUNNING
@@ -4954,6 +4977,7 @@ class IntersectionCollisionLeftTurnResumeCriterion(Criterion):
             and ego_speed >= self.min_resume_speed
         ):
             self.test_status = "SUCCESS"
+            self.safepass_status = "SUCCESS"
             return py_trees.common.Status.SUCCESS
 
         return new_status
