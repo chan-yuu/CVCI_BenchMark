@@ -2471,13 +2471,12 @@ class StaticObstacleSafePassCriterion(Criterion):
         route_center_y=41.85,
         name="StaticObstacleSafePassCriterion",
         terminate_on_failure=False
-        self.safepass_status = "INIT"
     ):
         super().__init__(name, actor, terminate_on_failure=terminate_on_failure)
         self.hazard_actor = hazard_actor
         self.lateral_safe_threshold = lateral_safe_threshold
         self.route_center_y = route_center_y
-
+        self.safepass_status = "INIT"
     def update(self):
         if not self.actor or not self.hazard_actor:
             return py_trees.common.Status.RUNNING
