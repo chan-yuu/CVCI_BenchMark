@@ -2621,14 +2621,14 @@
                 <scenario name="CutInCollisionTown04_level1_night_rain" town="Town04" type="CutInCollision">
                     <trigger_point x="-12.68" y="16.40" yaw="-179.77" z="10.64"/>
                     <trigger_distance value="40.0"/>
-                    <cutin_ready_distance value="16.0"/>
-                    <spawn_ahead_distance value="18.0"/>
+                    <cutin_ready_distance value="20.0"/>
+                    <spawn_ahead_distance value="15.0"/>
                     <straight_speed value="20.0"/>
-                    <cutin_initial_speed value="8.0"/>
-                    <cutin_lane_change_speed value="12.0"/>
+                    <cutin_initial_speed value="10.0"/>
+                    <cutin_lane_change_speed value="10.0"/>
                     <distance_same_lane value="6.0"/>
                     <distance_other_lane value="18.0"/>
-                    <distance_lane_change value="12.0"/>
+                    <distance_lane_change value="20.0"/>
                     <end_distance value="120.0"/>
                     <brake_trigger_distance value="24.0"/>
                     <response_timeout value="5.0"/>
@@ -2749,14 +2749,14 @@
                 <scenario name="CutInCollisionTown04_level1_night_sunny" town="Town04" type="CutInCollision">
                     <trigger_point x="-12.68" y="16.40" yaw="-179.77" z="10.64"/>
                     <trigger_distance value="40.0"/>
-                    <cutin_ready_distance value="16.0"/>
-                    <spawn_ahead_distance value="18.0"/>
+                    <cutin_ready_distance value="20.0"/>
+                    <spawn_ahead_distance value="15.0"/>
                     <straight_speed value="20.0"/>
-                    <cutin_initial_speed value="8.0"/>
-                    <cutin_lane_change_speed value="12.0"/>
+                    <cutin_initial_speed value="10.0"/>
+                    <cutin_lane_change_speed value="10.0"/>
                     <distance_same_lane value="6.0"/>
                     <distance_other_lane value="18.0"/>
-                    <distance_lane_change value="12.0"/>
+                    <distance_lane_change value="20.0"/>
                     <end_distance value="120.0"/>
                     <brake_trigger_distance value="24.0"/>
                     <response_timeout value="5.0"/>
@@ -2877,14 +2877,14 @@
                 <scenario name="CutInCollisionTown04_level1_day_rain" town="Town04" type="CutInCollision">
                     <trigger_point x="-12.68" y="16.40" yaw="-179.77" z="10.64"/>
                     <trigger_distance value="40.0"/>
-                    <cutin_ready_distance value="16.0"/>
-                    <spawn_ahead_distance value="18.0"/>
+                    <cutin_ready_distance value="20.0"/>
+                    <spawn_ahead_distance value="15.0"/>
                     <straight_speed value="20.0"/>
-                    <cutin_initial_speed value="8.0"/>
-                    <cutin_lane_change_speed value="12.0"/>
+                    <cutin_initial_speed value="10.0"/>
+                    <cutin_lane_change_speed value="10.0"/>
                     <distance_same_lane value="6.0"/>
                     <distance_other_lane value="18.0"/>
-                    <distance_lane_change value="12.0"/>
+                    <distance_lane_change value="20.0"/>
                     <end_distance value="120.0"/>
                     <brake_trigger_distance value="24.0"/>
                     <response_timeout value="5.0"/>
@@ -3005,14 +3005,14 @@
                 <scenario name="CutInCollisionTown04_level1_day_sunny" town="Town04" type="CutInCollision">
                     <trigger_point x="-12.68" y="16.40" yaw="-179.77" z="10.64"/>
                     <trigger_distance value="40.0"/>
-                    <cutin_ready_distance value="16.0"/>
-                    <spawn_ahead_distance value="18.0"/>
+                    <cutin_ready_distance value="20.0"/>
+                    <spawn_ahead_distance value="15.0"/>
                     <straight_speed value="20.0"/>
-                    <cutin_initial_speed value="8.0"/>
-                    <cutin_lane_change_speed value="12.0"/>
+                    <cutin_initial_speed value="10.0"/>
+                    <cutin_lane_change_speed value="10.0"/>
                     <distance_same_lane value="6.0"/>
                     <distance_other_lane value="18.0"/>
-                    <distance_lane_change value="12.0"/>
+                    <distance_lane_change value="20.0"/>
                     <end_distance value="120.0"/>
                     <brake_trigger_distance value="24.0"/>
                     <response_timeout value="5.0"/>
@@ -3134,14 +3134,14 @@
                 <scenario name="CutInCollisionTown04_level2_night_rain" town="Town04" type="CutInCollision">
                     <trigger_point x="-12.68" y="16.40" yaw="-179.77" z="10.64"/>
                     <trigger_distance value="35.0"/>
-                    <cutin_ready_distance value="12.0"/>
+                    <cutin_ready_distance value="20.0"/>
                     <spawn_ahead_distance value="12.0"/>
                     <straight_speed value="24.0"/>
-                    <cutin_initial_speed value="10.0"/>
-                    <cutin_lane_change_speed value="15.0"/>
+                    <cutin_initial_speed value="16.0"/>
+                    <cutin_lane_change_speed value="16.0"/>
                     <distance_same_lane value="4.0"/>
-                    <distance_other_lane value="26.0"/>
-                    <distance_lane_change value="10.0"/>
+                    <distance_other_lane value="20.0"/>
+                    <distance_lane_change value="22.0"/>
                     <end_distance value="135.0"/>
                     <brake_trigger_distance value="20.0"/>
                     <response_timeout value="4.0"/>
@@ -3262,14 +3262,14 @@
                 <scenario name="CutInCollisionTown04_level2_night_sunny" town="Town04" type="CutInCollision">
                     <trigger_point x="-12.68" y="16.40" yaw="-179.77" z="10.64"/>
                     <trigger_distance value="35.0"/>
-                    <cutin_ready_distance value="12.0"/>
+                    <cutin_ready_distance value="20.0"/>
                     <spawn_ahead_distance value="12.0"/>
                     <straight_speed value="24.0"/>
-                    <cutin_initial_speed value="10.0"/>
-                    <cutin_lane_change_speed value="15.0"/>
+                    <cutin_initial_speed value="16.0"/>
+                    <cutin_lane_change_speed value="16.0"/>
                     <distance_same_lane value="4.0"/>
-                    <distance_other_lane value="26.0"/>
-                    <distance_lane_change value="10.0"/>
+                    <distance_other_lane value="20.0"/>
+                    <distance_lane_change value="22.0"/>
                     <end_distance value="135.0"/>
                     <brake_trigger_distance value="20.0"/>
                     <response_timeout value="4.0"/>
@@ -3390,14 +3390,14 @@
                 <scenario name="CutInCollisionTown04_level2_day_rain" town="Town04" type="CutInCollision">
                     <trigger_point x="-12.68" y="16.40" yaw="-179.77" z="10.64"/>
                     <trigger_distance value="35.0"/>
-                    <cutin_ready_distance value="12.0"/>
+                    <cutin_ready_distance value="20.0"/>
                     <spawn_ahead_distance value="12.0"/>
                     <straight_speed value="24.0"/>
-                    <cutin_initial_speed value="10.0"/>
-                    <cutin_lane_change_speed value="15.0"/>
+                    <cutin_initial_speed value="16.0"/>
+                    <cutin_lane_change_speed value="16.0"/>
                     <distance_same_lane value="4.0"/>
-                    <distance_other_lane value="26.0"/>
-                    <distance_lane_change value="10.0"/>
+                    <distance_other_lane value="20.0"/>
+                    <distance_lane_change value="22.0"/>
                     <end_distance value="135.0"/>
                     <brake_trigger_distance value="20.0"/>
                     <response_timeout value="4.0"/>
@@ -3518,14 +3518,14 @@
                 <scenario name="CutInCollisionTown04_level2_day_sunny" town="Town04" type="CutInCollision">
                     <trigger_point x="-12.68" y="16.40" yaw="-179.77" z="10.64"/>
                     <trigger_distance value="35.0"/>
-                    <cutin_ready_distance value="12.0"/>
+                    <cutin_ready_distance value="20.0"/>
                     <spawn_ahead_distance value="12.0"/>
                     <straight_speed value="24.0"/>
-                    <cutin_initial_speed value="10.0"/>
-                    <cutin_lane_change_speed value="15.0"/>
+                    <cutin_initial_speed value="16.0"/>
+                    <cutin_lane_change_speed value="16.0"/>
                     <distance_same_lane value="4.0"/>
-                    <distance_other_lane value="26.0"/>
-                    <distance_lane_change value="10.0"/>
+                    <distance_other_lane value="20.0"/>
+                    <distance_lane_change value="22.0"/>
                     <end_distance value="135.0"/>
                     <brake_trigger_distance value="20.0"/>
                     <response_timeout value="4.0"/>
@@ -3642,20 +3642,21 @@
                 <position x="-186.42" y="15.28" z="12.61"/>
                 <position x="-188.42" y="15.27" z="12.59"/>
                 <position x="-190.42" y="15.26" z="12.56"/>
+                <position x="-250.42" y="15.26" z="12.56"/>
             </waypoints>
             <scenarios>
                 <scenario name="CutInCollisionTown04_level3_night_rain" town="Town04" type="CutInCollision">
                     <trigger_point x="-12.68" y="16.40" yaw="-179.77" z="10.64"/>
-                    <trigger_distance value="30.0"/>
-                    <cutin_ready_distance value="8.0"/>
+                    <trigger_distance value="50.0"/>
+                    <cutin_ready_distance value="30.0"/>
                     <spawn_ahead_distance value="8.0"/>
                     <straight_speed value="28.0"/>
-                    <cutin_initial_speed value="12.0"/>
-                    <cutin_lane_change_speed value="18.0"/>
-                    <distance_same_lane value="2.0"/>
-                    <distance_other_lane value="34.0"/>
-                    <distance_lane_change value="8.0"/>
-                    <end_distance value="150.0"/>
+                    <cutin_initial_speed value="22.0"/>
+                    <cutin_lane_change_speed value="24.0"/>
+                    <distance_same_lane value="6.0"/>
+                    <distance_other_lane value="18.0"/>
+                    <distance_lane_change value="12.0"/>
+                    <end_distance value="250.0"/>
                     <brake_trigger_distance value="16.0"/>
                     <response_timeout value="3.0"/>
                     <other_actor model="vehicle.lincoln.mkz_2017" x="-70.00" y="20.20" yaw="-179.77" z="10.60"/>
@@ -3770,20 +3771,21 @@
                 <position x="-186.42" y="15.28" z="12.61"/>
                 <position x="-188.42" y="15.27" z="12.59"/>
                 <position x="-190.42" y="15.26" z="12.56"/>
+                <position x="-250.42" y="15.26" z="12.56"/>
             </waypoints>
             <scenarios>
                 <scenario name="CutInCollisionTown04_level3_night_sunny" town="Town04" type="CutInCollision">
                     <trigger_point x="-12.68" y="16.40" yaw="-179.77" z="10.64"/>
-                    <trigger_distance value="30.0"/>
-                    <cutin_ready_distance value="8.0"/>
+                    <trigger_distance value="50.0"/>
+                    <cutin_ready_distance value="30.0"/>
                     <spawn_ahead_distance value="8.0"/>
                     <straight_speed value="28.0"/>
-                    <cutin_initial_speed value="12.0"/>
-                    <cutin_lane_change_speed value="18.0"/>
-                    <distance_same_lane value="2.0"/>
-                    <distance_other_lane value="34.0"/>
-                    <distance_lane_change value="8.0"/>
-                    <end_distance value="150.0"/>
+                    <cutin_initial_speed value="22.0"/>
+                    <cutin_lane_change_speed value="24.0"/>
+                    <distance_same_lane value="6.0"/>
+                    <distance_other_lane value="18.0"/>
+                    <distance_lane_change value="12.0"/>
+                    <end_distance value="250.0"/>
                     <brake_trigger_distance value="16.0"/>
                     <response_timeout value="3.0"/>
                     <other_actor model="vehicle.lincoln.mkz_2017" x="-70.00" y="20.20" yaw="-179.77" z="10.60"/>
@@ -3898,20 +3900,21 @@
                 <position x="-186.42" y="15.28" z="12.61"/>
                 <position x="-188.42" y="15.27" z="12.59"/>
                 <position x="-190.42" y="15.26" z="12.56"/>
+                <position x="-250.42" y="15.26" z="12.56"/>
             </waypoints>
             <scenarios>
                 <scenario name="CutInCollisionTown04_level3_day_rain" town="Town04" type="CutInCollision">
                     <trigger_point x="-12.68" y="16.40" yaw="-179.77" z="10.64"/>
-                    <trigger_distance value="30.0"/>
-                    <cutin_ready_distance value="8.0"/>
+                    <trigger_distance value="50.0"/>
+                    <cutin_ready_distance value="30.0"/>
                     <spawn_ahead_distance value="8.0"/>
                     <straight_speed value="28.0"/>
-                    <cutin_initial_speed value="12.0"/>
-                    <cutin_lane_change_speed value="18.0"/>
-                    <distance_same_lane value="2.0"/>
-                    <distance_other_lane value="34.0"/>
-                    <distance_lane_change value="8.0"/>
-                    <end_distance value="150.0"/>
+                    <cutin_initial_speed value="22.0"/>
+                    <cutin_lane_change_speed value="24.0"/>
+                    <distance_same_lane value="6.0"/>
+                    <distance_other_lane value="18.0"/>
+                    <distance_lane_change value="12.0"/>
+                    <end_distance value="250.0"/>
                     <brake_trigger_distance value="16.0"/>
                     <response_timeout value="3.0"/>
                     <other_actor model="vehicle.lincoln.mkz_2017" x="-70.00" y="20.20" yaw="-179.77" z="10.60"/>
@@ -4026,20 +4029,21 @@
                 <position x="-186.42" y="15.28" z="12.61"/>
                 <position x="-188.42" y="15.27" z="12.59"/>
                 <position x="-190.42" y="15.26" z="12.56"/>
+                <position x="-250.42" y="15.26" z="12.56"/>
             </waypoints>
             <scenarios>
                 <scenario name="CutInCollisionTown04_level3_day_sunny" town="Town04" type="CutInCollision">
                     <trigger_point x="-12.68" y="16.40" yaw="-179.77" z="10.64"/>
-                    <trigger_distance value="30.0"/>
-                    <cutin_ready_distance value="8.0"/>
+                    <trigger_distance value="50.0"/>
+                    <cutin_ready_distance value="30.0"/>
                     <spawn_ahead_distance value="8.0"/>
                     <straight_speed value="28.0"/>
-                    <cutin_initial_speed value="12.0"/>
-                    <cutin_lane_change_speed value="18.0"/>
-                    <distance_same_lane value="2.0"/>
-                    <distance_other_lane value="34.0"/>
-                    <distance_lane_change value="8.0"/>
-                    <end_distance value="150.0"/>
+                    <cutin_initial_speed value="22.0"/>
+                    <cutin_lane_change_speed value="24.0"/>
+                    <distance_same_lane value="6.0"/>
+                    <distance_other_lane value="18.0"/>
+                    <distance_lane_change value="12.0"/>
+                    <end_distance value="250.0"/>
                     <brake_trigger_distance value="16.0"/>
                     <response_timeout value="3.0"/>
                     <other_actor model="vehicle.lincoln.mkz_2017" x="-70.00" y="20.20" yaw="-179.77" z="10.60"/>
