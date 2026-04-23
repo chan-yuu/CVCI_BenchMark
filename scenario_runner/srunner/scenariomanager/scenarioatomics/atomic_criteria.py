@@ -2676,13 +2676,6 @@ class CutInBrakeResponseCriterion(Criterion):
         else:
             self._brake_start_time = None
 
-        speed_drop_ratio = (self._baseline_speed - current_speed) / max(self._baseline_speed, 0.1)
-        if speed_drop_ratio >= self.speed_drop_ratio:
-            self.test_status = 'SUCCESS'
-            self.brake_status = 'SUCCESS'
-            self.actual_value = 1
-            return py_trees.common.Status.SUCCESS
-
         if current_time - self._start_time > self.max_response_time:
             self.test_status = 'FAILURE'
             self.actual_value = 0
@@ -3612,7 +3605,7 @@ class ScooterDecelerateCriterion(Criterion):
     def __init__(self, actor, scooter_actor, name="ScooterDecelerateCriterion",
                  route_start_location=None, route_end_location=None,
                  trigger_distance=35.0, min_speed_drop=3.0, brake_threshold=0.2,
-                 min_brake_duration=0.4, pass_buffer=2.0, latest_reaction_distance=8.0,
+                 min_brake_duration=0.4, pass_buffer=2.0, latest_reaction_distance=1.0,
                  terminate_on_failure=False):
         super().__init__(name, actor, terminate_on_failure=terminate_on_failure)
         self.scooter_actor = scooter_actor
@@ -3640,6 +3633,7 @@ class ScooterDecelerateCriterion(Criterion):
         self.success_value = min_speed_drop
         self.units = "m/s"
         self.test_status = "FAILURE"
+        self.brake_status = "INIT"
 
     def update(self):
         new_status = py_trees.common.Status.RUNNING
@@ -3676,43 +3670,23 @@ class ScooterDecelerateCriterion(Criterion):
         if meaningful_slowdown and self._first_meaningful_slowdown_distance is None:
             self._first_meaningful_slowdown_distance = longitudinal_dist
 
-        slowdown_started_too_late = (
-            self._first_meaningful_slowdown_distance is not None and
-            self._first_meaningful_slowdown_distance <= self.latest_reaction_distance
-        )
-
-        if slowdown_started_too_late:
-            self.test_status = "FAILURE"
-            if self._terminate_on_failure:
-                return py_trees.common.Status.FAILURE
-            return new_status
-
-        if longitudinal_dist <= self.latest_reaction_distance and self._first_meaningful_slowdown_distance is None:
-            self.test_status = "FAILURE"
-            if self._terminate_on_failure:
-                return py_trees.common.Status.FAILURE
-            return new_status
-
-        if longitudinal_dist <= self.latest_reaction_distance and speed_drop < self.min_speed_drop:
-            self.test_status = "FAILURE"
-            if self._terminate_on_failure:
-                return py_trees.common.Status.FAILURE
-            return new_status
-
         reaction_detected = speed_drop >= self.min_speed_drop
-        if reaction_detected:
-            current_time = GameTime.get_time()
-            if self._reaction_start_time is None:
-                self._reaction_start_time = current_time
-            elif current_time - self._reaction_start_time >= self.min_brake_duration:
-                self._has_valid_slowdown = True
-                if self._first_meaningful_slowdown_distance is not None and \
-                        self._first_meaningful_slowdown_distance > self.latest_reaction_distance:
+
+        control = self.actor.get_control()
+
+
+        if control.brake >= self.brake_threshold:
+            if reaction_detected :
+                current_time = GameTime.get_time()
+                if self._reaction_start_time is None:
+                    self._reaction_start_time = current_time
+                if current_time - self._reaction_start_time >= self.min_brake_duration:
                     self.test_status = "SUCCESS"
-                else:
-                    self.test_status = "FAILURE"
-        else:
-            self._reaction_start_time = None
+                    self.brake_status = "SUCCESS"
+
+
+            else:
+                self._reaction_start_time = None
 
         if longitudinal_dist < -self.pass_buffer and not self._has_valid_slowdown:
             self.test_status = "FAILURE"
