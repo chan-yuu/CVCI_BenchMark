@@ -6,20 +6,58 @@
   </a>
 </p>
 
-CVCI_BenchMark (Bench2InterActDrive) is a closed-loop benchmark for end-to-end autonomous driving at CVCI 2026.  
-Built on Bench2Drive and CARLA, it is designed for safety-critical, long-tail, and highly interactive traffic scenarios.
+<p align="center">
+  <strong>Bench2InterActDrive: A Closed-Loop Benchmark for End-to-End Autonomous Driving at CVCI 2026</strong>
+</p>
 
-This repository provides the complete benchmark routes, scenario implementations, and evaluation pipeline used in CVCI 2026.  
-For a full overview of motivation, benchmark design, and protocol details, please read [introduction.pdf](./assets/introduction.pdf).  
-The benchmark description referenced on the poster is available as [web_description.docx](./assets/web_description.docx).  
+<p align="center">
+  Built upon <a href="https://github.com/Thinklab-SJTU/Bench2Drive">Bench2Drive</a> and CARLA for safety-critical, long-tail, and highly interactive driving evaluation.
+</p>
 
-## Highlights
+---
 
-- Closed-loop online evaluation in CARLA.
-- 12 scenario categories and 144 scenario instances.
-- Scenario-specific parameters define three progressive difficulty levels.
-- Four weather/lighting variants: `night&rain`, `night&sunny`, `day&rain`, `day&sunny`.
-- Dual-score protocol: Bench2Drive route score + CVCI scenario-aware score (weighted fusion).
+## Overview
+
+**CVCI_BenchMark (Bench2InterActDrive)** is a closed-loop benchmark for evaluating end-to-end autonomous driving systems under safety-critical, long-tail, and highly interactive traffic scenarios.
+
+Built upon [Bench2Drive](https://github.com/Thinklab-SJTU/Bench2Drive) and CARLA, this benchmark extends standard route-level evaluation with a scenario-aware behavioral assessment protocol to better measure robustness, safety, and interaction quality in challenging driving situations.
+
+This repository provides the benchmark routes, scenario implementations, and evaluation pipeline used in **CVCI 2026**.
+
+For more details, please refer to:
+
+- [introduction.pdf](./assets/introduction.pdf): benchmark motivation, design, and protocol
+- [web_description.docx](./assets/web_description.docx): challenge description referenced on the poster
+- [CVCI_2026_Benchmark_Poster_1.pdf](./assets/CVCI_2026_Benchmark_Poster_1.pdf): benchmark poster
+
+---
+
+## Key Features
+
+- **Closed-loop online evaluation** in CARLA
+- **12 scenario categories** with **144 scenario instances**
+- **Three progressive difficulty levels** defined by scenario-specific parameters
+- **Four weather and lighting variants**:
+  - `night&rain`
+  - `night&sunny`
+  - `day&rain`
+  - `day&sunny`
+- **Dual-score evaluation protocol**:
+  - Bench2Drive route-level score
+  - CVCI scenario-aware interaction score
+
+---
+
+## Benchmark Foundation
+
+This benchmark is developed on top of the official **Bench2Drive** framework:
+
+- **Bench2Drive repository:** [https://github.com/Thinklab-SJTU/Bench2Drive](https://github.com/Thinklab-SJTU/Bench2Drive)
+
+The standard route-level evaluation in this benchmark follows the official Bench2Drive implementation and scoring logic.  
+The CVCI extension further introduces scenario-aware behavioral scoring for interactive risk scenarios.
+
+---
 
 ## Environment Setup
 
@@ -63,7 +101,9 @@ export PYTHONPATH=$PYTHONPATH:leaderboard
 export PYTHONPATH=$PYTHONPATH:scenario_runner
 ```
 
-## Evaluation
+---
+
+## Running Evaluation
 
 ```bash
 python leaderboard/leaderboard/leaderboard_evaluator.py \
@@ -73,6 +113,8 @@ python leaderboard/leaderboard/leaderboard_evaluator.py \
   --checkpoint ./evaluation_results/cvci_benchmark.json
 ```
 
+---
+
 ## Metrics and Result Processing
 
 ```bash
@@ -81,33 +123,83 @@ python tools/ability_benchmark.py -r merge.json
 python tools/efficiency_smoothness_benchmark.py -f merge.json -m /path/to/metric_folder/
 ```
 
-## Scoring System
+---
 
-The final score is computed by weighted fusion of:
+## Evaluation Protocol
 
-1. Bench2Drive route-level driving score.
-2. CVCI scenario-aware score on interactive risk scenarios.
+The final benchmark result is obtained by combining two complementary evaluation components:
 
-For the CVCI scenario-aware part:
+1. **Bench2Drive route-level score**
+2. **CVCI scenario-aware interaction score**
 
-- Scenario score starts from criterion-level evaluation aligned with scenario intent (for example, deceleration, avoidance, and safe resume).
-- Safety gates/penalties are applied for severe violations (for example, collisions and critical infractions).
-- Final scenario score balances safety, task completion, and behavior quality.
+### Bench2Drive Route-Level Score
 
-This protocol reduces over-rewarding of overly conservative "stop-only" policies.
+The route-level driving score follows the official evaluation protocol of Bench2Drive.  
+It is used to measure general driving performance over benchmark routes, including route completion and penalty-aware driving quality.
+
+Please refer to the official repository for the original implementation and scoring details:
+
+- [Bench2Drive Official Repository](https://github.com/Thinklab-SJTU/Bench2Drive)
+
+In this benchmark, the **Bench2Drive score is computed according to the official Bench2Drive evaluation pipeline**.
+
+### CVCI Scenario-Aware Interaction Score
+
+To better evaluate performance in highly interactive and safety-critical scenarios, CVCI_BenchMark introduces an additional scenario-aware behavioral assessment.
+
+This component is designed to measure whether the agent performs the intended key behaviors required by each scenario, instead of receiving excessive credit from overly conservative or stop-only strategies.
+
+The scenario-aware score is based on three aspects:
+
+- **Scenario-aligned behavioral criteria**  
+  Each scenario is equipped with behavior-oriented criteria tailored to its interaction intent, such as hazard response, deceleration timing, conflict resolution, avoidance quality, and safe recovery.
+
+- **Safety-sensitive failure handling**  
+  Severe failures, including collisions and other critical violations, are incorporated through strict safety constraints and penalty mechanisms.
+
+- **Behavior quality under interaction**  
+  The final scenario score reflects not only whether the agent remains safe, but also whether it completes the interactive task in a reasonable, stable, and behaviorally appropriate manner.
+
+This design makes the benchmark more interpretable and more faithful to the intended evaluation targets of challenging autonomous driving scenarios.
+
+### Final Benchmark Score
+
+The final benchmark result is computed through a **weighted fusion** of:
+
+- the **standard Bench2Drive route-level score**, and
+- the **CVCI scenario-aware interaction score**
+
+This dual-score design allows the benchmark to jointly evaluate:
+
+- overall route-following and general driving competence
+- fine-grained behavioral quality in interactive risk scenarios
+
+As a result, the benchmark can better distinguish robust and capable autonomous driving systems from policies that appear safe only because they are excessively conservative.
+
+---
 
 ## Data Download
 
-Benchmark data is available at:
+Bench2InterActDrive data is available at:
 
-https://huggingface.co/datasets/55sleeper/CVCI_BENCHmark/tree/main
+- [Hugging Face Dataset](https://huggingface.co/datasets/55sleeper/CVCI_BENCHmark/tree/main)
+
+---
 
 ## CVCI 2026 Timeline
 
-- Benchmark and data release: April 15, 2026.
-- Paper + challenge result submission: July 1, 2026.
-- Final result submission: September 1, 2026.
+- **Benchmark and data release:** April 25, 2026
+- **Paper + challenge result submission:** July 1, 2026
+- **Final result submission:** September 1, 2026
+
+---
+
+## Citation
+
+If you use this benchmark in your research, please cite the corresponding benchmark paper or challenge description when available.
+
+---
 
 ## License
 
-All assets and code are under the repository license unless specified otherwise.
+All assets and code in this repository are released under the repository license unless otherwise specified.
