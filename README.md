@@ -200,6 +200,22 @@ Bench2InterActDrive data is available at:
 
 - [Hugging Face Dataset](https://huggingface.co/datasets/55sleeper/CVCI_BENCHmark/tree/main)
 
+### Download via Python Script
+
+Since the runtime environment uses **Python 3.7**, please use the provided script to download the dataset instead of the Hugging Face CLI:
+
+1. Install `huggingface_hub` (compatible with Python 3.7):
+   ```bash
+   pip install huggingface_hub
+   ```
+
+2. Run the download script:
+   ```bash
+   python download_dataset.py --local-dir ./CVCI_BENCHmark
+   ```
+
+The dataset will be saved to the specified local directory. The script supports resume download, so you can safely re-run it if the download is interrupted.
+
 ---
 
 ## CVCI 2026 Timeline
